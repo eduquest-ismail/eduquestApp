@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InAppBrowser.addEventListener Example</title>
+    <title>Eduquest MobileApp</title>
 
     <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -13,10 +13,8 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-         var ref = window.open('http://www.eduquest.com.sg', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-         ref.addEventListener('exit', function() { alert(event.type); });
+        // external url
+        var ref = window.open(encodeURI('http://www.eduquest.com.sg'), '_blank', 'location=yes');
     }
 
     </script>
