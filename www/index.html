@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Device Properties Example</title>
+    <title>PhoneGap Device Ready Example</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for Cordova to load
+    // Call onDeviceReady when PhoneGap is loaded.
     //
-    document.addEventListener("deviceready", onDeviceReady, false);
+    // At this point, the document has loaded but phonegap-1.3.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+        var ref = window.open(encodeURI('http://www.eduquestindia.in'), '_blank', 'location=yes');
+    }
 
-    // Cordova is ready
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
     function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-
-        element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                            'Device Cordova: '  + device.cordova  + '<br />' + 
-                            'Device Platform: ' + device.platform + '<br />' + 
-                            'Device UUID: '     + device.uuid     + '<br />' + 
-                            'Device Version: '  + device.version  + '<br />';
+        // Now safe to use the PhoneGap API
+        var ref = window.open(encodeURI('http://www.eduquest.com.sg'), '_blank', 'location=yes');
     }
 
     </script>
   </head>
-  <body>
-    <p id="deviceProperties">Loading device properties...</p>
+  <body onload="onLoad()">
   </body>
 </html>
