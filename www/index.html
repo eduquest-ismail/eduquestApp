@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Eduquest MobileApp</title>
+    <title>Device Properties Example</title>
 
     <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -13,12 +13,18 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-        // external url
-        var ref = window.open(encodeURI('http://www.eduquest.com.sg'), '_blank', 'location=yes');
+        var element = document.getElementById('deviceProperties');
+
+        element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                            'Device Cordova: '  + device.cordova  + '<br />' + 
+                            'Device Platform: ' + device.platform + '<br />' + 
+                            'Device UUID: '     + device.uuid     + '<br />' + 
+                            'Device Version: '  + device.version  + '<br />';
     }
 
     </script>
   </head>
   <body>
+    <p id="deviceProperties">Loading device properties...</p>
   </body>
 </html>
