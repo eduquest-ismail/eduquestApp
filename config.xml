@@ -10,6 +10,9 @@
     <content src="index.html" />
     <access origin="*" />
     
+    <platform name="android">
+        <preference name="Fullscreen" value="true" />
+    </platform>
     <preference name="permissions"                value="none"/>
     <preference name="phonegap-version"           value="3.5.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
