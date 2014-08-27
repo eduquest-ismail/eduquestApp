@@ -14,6 +14,7 @@
     <gap:platform name="ios" />
     <gap:platform name="android" />
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
     <content src="index.html" />
     <access origin="*" />
 </widget>
