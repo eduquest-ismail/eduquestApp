@@ -2,9 +2,20 @@
 <html>
   <head>
     <title></title>
-
+    <style>
+    	div#menu {
+  		width: 30%;
+  		background-color: yellow;
+  		position:absolute;
+  		bottom: 0;
+  		left: 35%;
+  		display:none;
+  	}
+  	</style>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
+    var menuOpen = false;
+	  var menuDiv = "";
 
     // Wait for device API libraries to load
     //
@@ -17,10 +28,20 @@
       window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
     }
      function onMenuKeyDown() {
-       window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+       if(menuOpen) {
+    			menuDiv.style.display="none";
+    			menuOpen = false;
+    		} else {
+     			menuDiv.style.display="block";
+    			menuOpen = true;
+    		}
     }
     </script>
   </head>
   <body>
+    <div id="menu">
+    	<a href="http://m.eduquest.com.sg">Home</a><br/>
+    	<a href="http://m.eduquest.com.sg">Exit</a>
+    </div>
   </body>
 </html>
