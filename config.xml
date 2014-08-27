@@ -14,6 +14,7 @@
     </author>
     <gap:config-file platform="android" parent="/manifest">
         <application android:theme="@android:style/Theme.NoTitleBar"></application>
+        <application android:theme="@android:style/Theme.Holo.NoActionBar"></application>
     </gap:config-file>
     <content src="index.html" />
     <access origin="*" />
