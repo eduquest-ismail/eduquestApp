@@ -13,6 +13,8 @@
     </author>
     <gap:platform name="ios" />
     <gap:platform name="android" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="BackgroundColor" value="0xff0000ff"/>
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <content src="index.html" />
     <access origin="*" />
