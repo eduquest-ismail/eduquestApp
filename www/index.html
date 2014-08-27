@@ -9,17 +9,11 @@
     // Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
-    
-    function replaceHeaderImage() {
-          navigator.splashscreen.hide();
-    }
-
+   
     // device APIs are available
     //
     function onDeviceReady() {
-      navigator.splashscreen.show();
       var ref = window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
-      ref.addEventListener('loadstop', replaceHeaderImage);
     }
     </script>
   </head>
