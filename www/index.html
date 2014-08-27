@@ -15,7 +15,7 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
     var menuOpen = false;
-	  var menuDiv = "";
+    var menuDiv = "";
 
     // Wait for device API libraries to load
     //
@@ -25,7 +25,8 @@
     //
     function onDeviceReady() {
       document.addEventListener("menubutton", onMenuKeyDown, false);
-      window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+      menuDiv = document.querySelector("#menu");
+      //window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
     }
      function onMenuKeyDown() {
        if(menuOpen) {
