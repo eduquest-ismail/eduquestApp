@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id= "com.eduquest.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    
+   <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.eduquest"
+        versionCode = "10" 
+        version     = "1.0.0" >
     <name>Eduquest Mobile</name>
     <description>
         Eduquest Mobile Application
@@ -8,11 +11,8 @@
     <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
         Mohamed Ismail
     </author>
-      [gap:config-file platform="android" parent="/manifest"]
-      [application android:theme="@android:style/Theme.NoTitleBar" ]
-      [activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ][/activity]
-      [/application]
-      [/gap:config-file]
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
