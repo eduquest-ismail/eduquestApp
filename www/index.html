@@ -10,31 +10,25 @@
     function onDeviceReady() {
       var x = window.localStorage.getItem("uid");
       var y = window.localStorage.getItem("pwd");
-       if(value!=null)
+       if(x!=null && y!=null)
        {
-         alert('Welcome, ' + value);
          window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
-       }
-       else
-       {
-          alert('Not Signed');
-          window.localStorage.setItem("uid", "ismail");
        }
     }
     
     function validateForm() {
-    var x = document.forms["myForm"]["UID"].value;
-    if (x == null || x == "") {
-        alert("Username cannot Blank");
-        return false;
-    }
-    var y = document.forms["myForm"]["PWD"].value;
-    if (y == null || y == "") {
-        alert("Password cannot Blank");
-        return false;
-    }
-    window.localStorage.setItem("uid", x);
-    window.localStorage.setItem("pwd", y);
+      var x = document.forms["myForm"]["UID"].value;
+      if (x == null || x == "") {
+          alert("Username cannot Blank");
+          return false;
+      }
+      var y = document.forms["myForm"]["PWD"].value;
+      if (y == null || y == "") {
+          alert("Password cannot Blank");
+          return false;
+      }
+      window.localStorage.setItem("uid", x);
+      window.localStorage.setItem("pwd", y);
     }
     </script>
   </head>
