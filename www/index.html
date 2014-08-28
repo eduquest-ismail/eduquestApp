@@ -9,7 +9,7 @@
   
     function onDeviceReady() {
        var value = window.localStorage.getItem("uid");
-       if(value!="")
+       if(value!=null)
        {
          alert('Welcome, ' + value);
          window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
