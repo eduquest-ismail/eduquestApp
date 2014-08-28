@@ -12,7 +12,6 @@
       var y = window.localStorage.getItem("pwd");
        if(x!=null && y!=null)
        {
-          var arForm = $("#myForm").serializeArray();
                 $.ajax({
                   type: "POST",
                   url: "http://m.eduquest.com.sg/WebService.asmx/validateLogin",
