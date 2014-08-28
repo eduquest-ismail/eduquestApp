@@ -12,14 +12,29 @@
       var y = window.localStorage.getItem("pwd");
        if(x!=null && y!=null)
        {
-         window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+          $.ajax({
+                  type: "POST",
+                  contentType: "application/json; charset=utf-8",
+                  url: "http://IPADDRESS/Service.asmx",
+                  data: '{ "deviceid" : "' + deviceid + '", "Latitude": "' + latitude + '","Longitude":"' + longitude + '" }',
+                  dataType: "json",
+                  success: startApp,
+                  failure: clearPwd
+              });
        }
        else
        {
          document.getElementById('loginPanel').style.display = 'block';
        }
     }
-    
+    function startApp()
+    {
+      window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+    }
+    function clearPwd()
+    {
+      window.localStorage.clear();
+    }
     function validateForm() {
       var x = document.forms["myForm"]["UID"].value;
       if (x == null || x == "") {
