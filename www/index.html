@@ -12,10 +12,11 @@
       var y = window.localStorage.getItem("pwd");
        if(x!=null && y!=null)
        {
+          var arForm = $("#myForm").serializeArray();
                 $.ajax({
                   type: "POST",
                   url: "WebService.asmx/MyMethod",
-                  data: "{}",
+                  data: JSON.stringify({ formVars: arForm }),
                   contentType: "application/json; charset=utf-8",
                   dataType: "json",
                   success: function(msg) {
