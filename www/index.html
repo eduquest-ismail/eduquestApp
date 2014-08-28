@@ -12,15 +12,24 @@
       var y = window.localStorage.getItem("pwd");
        if(x!=null && y!=null)
        {
-          $.ajax({
+                $.ajax({
                   type: "POST",
+                  url: "WebService.asmx/MyMethod",
+                  data: "{}",
                   contentType: "application/json; charset=utf-8",
-                  url: "http://IPADDRESS/Service.asmx",
-                  data: '{ "deviceid" : "' + deviceid + '", "Latitude": "' + latitude + '","Longitude":"' + longitude + '" }',
                   dataType: "json",
-                  success: startApp,
+                  success: function(msg) {
+                    if(msg.d=="true")
+                    {
+                      startApp();
+                    }
+                    else
+                    {
+                      clearPwd();
+                    }
+                  }
                   failure: clearPwd
-              });
+                });
        }
        else
        {
