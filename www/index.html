@@ -8,7 +8,8 @@
     document.addEventListener("deviceready", onDeviceReady, false);
   
     function onDeviceReady() {
-       var value = window.localStorage.getItem("uid");
+      var x = window.localStorage.getItem("uid");
+      var y = window.localStorage.getItem("pwd");
        if(value!=null)
        {
          alert('Welcome, ' + value);
@@ -20,8 +21,27 @@
           window.localStorage.setItem("uid", "ismail");
        }
     }
+    
+    function validateForm() {
+    var x = document.forms["myForm"]["UID"].value;
+    if (x == null || x == "") {
+        alert("Username cannot Blank");
+        return false;
+    }
+    var y = document.forms["myForm"]["PWD"].value;
+    if (y == null || y == "") {
+        alert("Password cannot Blank");
+        return false;
+    }
+    window.localStorage.setItem("uid", x);
+    window.localStorage.setItem("pwd", y);
+    }
     </script>
   </head>
   <body>
+  <form name="myForm" onsubmit="return validateForm()">
+    Username: <input type="text" name="UID"><br>
+    Password: <input type="password" name="PWD">
+  </form>
   </body>
 </html>
