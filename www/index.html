@@ -19,15 +19,15 @@
 
     // Wait for device API libraries to load
     //
-    document.addEventListener("deviceready", onDeviceReady, false);
+    //document.addEventListener("deviceready", onDeviceReady, false);
    
     // device APIs are available
     //
-    function onDeviceReady() {
-      document.addEventListener("menubutton", onMenuKeyDown, false);
-      menuDiv = document.querySelector("#menu");
-      window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
-    }
+    //function onDeviceReady() {
+    //  document.addEventListener("menubutton", onMenuKeyDown, false);
+    //  menuDiv = document.querySelector("#menu");
+    //  window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+    //}
      function onMenuKeyDown() {
        if(menuOpen) {
     			menuDiv.style.display="none";
@@ -40,8 +40,9 @@
     </script>
   </head>
   <body>
+    <iframe src="http://m.eduquest.com.sg" width="100%" height="100%"></iframe>
     <div id="menu">
-    	<a href="http://m.eduquest.com.sg">Home</a><br/>
+    	<a href="http://eduquest.com.sg">Home</a><br/>
     </div>
   </body>
 </html>
