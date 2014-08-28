@@ -15,7 +15,7 @@
           var arForm = $("#myForm").serializeArray();
                 $.ajax({
                   type: "POST",
-                  url: "WebService.asmx/MyMethod",
+                  url: "http://m.eduquest.com.sg/WebService.asmx/validateLogin",
                   data: JSON.stringify({ formVars: arForm }),
                   contentType: "application/json; charset=utf-8",
                   dataType: "json",
