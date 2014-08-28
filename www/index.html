@@ -16,7 +16,7 @@
                 $.ajax({
                   type: "POST",
                   url: "http://m.eduquest.com.sg/WebService.asmx/validateLogin",
-                  data: JSON.stringify({ formVars: arForm }),
+                  data: {"UID":x, "PWD":y},
                   contentType: "application/json; charset=utf-8",
                   dataType: "json",
                   success: function(msg) {
