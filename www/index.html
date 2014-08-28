@@ -8,11 +8,18 @@
     document.addEventListener("deviceready", onDeviceReady, false);
   
     function onDeviceReady() {
-       window.localStorage.setItem("uid", "ismail");
        var value = window.localStorage.getItem("uid");
-      window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+       if(value!="")
+       {
+         alert('Welcome, ' + value);
+         window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+       }
+       else
+       {
+          alert('Not Signed');
+          window.localStorage.setItem("uid", "ismail");
+       }
     }
-    
     </script>
   </head>
   <body>
