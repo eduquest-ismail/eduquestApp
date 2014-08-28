@@ -34,7 +34,7 @@
        }
        else
        {
-         document.getElementById('loginPanel').style.display = 'block';
+         clearPwd();
        }
     }
     function startApp()
@@ -44,6 +44,7 @@
     function clearPwd()
     {
       window.localStorage.clear();
+      document.getElementById('loginPanel').style.display = 'block';
     }
     function validateForm() {
       var x = document.forms["myForm"]["UID"].value;
