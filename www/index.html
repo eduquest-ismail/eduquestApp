@@ -14,6 +14,10 @@
        {
          window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
        }
+       else
+       {
+         document.getElementById('loginPanel').style.display = 'block';
+       }
     }
     
     function validateForm() {
@@ -33,10 +37,12 @@
     </script>
   </head>
   <body>
-  <form name="myForm" onsubmit="return validateForm()">
-    Username: <input type="text" name="UID"><br>
-    Password: <input type="password" name="PWD">
-    <input type="submit" value="Submit">
-  </form>
+    <div id="loginPanel" style="display: none;">
+      <form name="myForm" onsubmit="return validateForm()">
+        Username: <input type="text" name="UID"><br>
+        Password: <input type="password" name="PWD">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </body>
 </html>
