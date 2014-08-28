@@ -8,6 +8,8 @@
     document.addEventListener("deviceready", onDeviceReady, false);
   
     function onDeviceReady() {
+       window.localStorage.setItem("uid", "ismail");
+       var value = window.localStorage.getItem("uid");
       window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
     }
     
