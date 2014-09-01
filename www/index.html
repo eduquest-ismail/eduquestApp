@@ -86,25 +86,27 @@
       }
     </style>
   </head>
-  <body class="bg">
-    <div id="loginPanel" style="display: none;">
+  <body  style="margin:0px;padding:0px;">
+    <div class="bg"  id="loginPanel" style="display: none;width:100%;height:1000px;">
       <form name="myForm" onsubmit="return validateForm()">
-        <table>
-          <tr>
-            <td>Username</td>
-            <td><input type="text" name="UID"></td>
-          </tr>
-          <tr>
-            <td>Password</td>
-            <td><input type="password" name="PWD"></td>
-          </tr>
-          <tr>
-            <td  colspan="2">
-              <input type="submit" value="LOGIN">
-              <button type="button" onclick="startApp()">SKIP</button>
-            </td>
-          </tr>
-        </table>
+        <center>
+            <table style="width:300px;height:150px;" >
+              <tr style="width:100%;">
+                <td style="width:50%;">Username</td>
+                <td style="width:50%;"><input type="text" name="UID" style="float:right;"></td>
+              </tr>
+              <tr>
+                <td>Password</td>
+                <td><input type="password" name="PWD" style="float:right;"></td>
+              </tr>
+              <tr>
+                <td  colspan="2">
+                    <button type="button" onclick="startApp()" style="float:right;">SKIP</button>
+                    <input type="submit" value="LOGIN" style="float:right;"> 
+                </td>
+              </tr>
+            </table>
+        </center>
       </form>
     </div>
   </body>
