@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <title>Eduquest Mobile</title>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
@@ -88,9 +89,22 @@
   <body class="bg">
     <div id="loginPanel" style="display: none;">
       <form name="myForm" onsubmit="return validateForm()">
-        Username: <input type="text" name="UID"><br>
-        Password: <input type="password" name="PWD">
-        <input type="submit" value="Submit">
+        <table>
+          <tr>
+            <td>Username</td>
+            <td><input type="text" name="UID"></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="PWD"></td>
+          </tr>
+          <tr>
+            <td  colspan="2">
+              <input type="submit" value="Submit">
+              <input type="submit" value="Submit">
+            </td>
+          </tr>
+        </table>
       </form>
     </div>
   </body>
