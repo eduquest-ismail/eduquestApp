@@ -12,29 +12,40 @@
       var y = window.localStorage.getItem("pwd");
        if(x!=null && y!=null)
        {
-                $.ajax({
-                  type: "POST",
-                  url: "http://m.eduquest.com.sg/WebService.asmx/validateLogin",
-                  data: "{}",
-                  contentType: "application/json; charset=utf-8",
-                  dataType: "json",
-                  success: function(msg) {
-                    if(msg.d=="true")
-                    {
-                      startApp();
-                    }
-                    else
-                    {
-                      clearPwd();
-                    }
-                  }
-                  failure: clearPwd
-                });
+         verifyLogin(x,y);
        }
        else
        {
          clearPwd();
        }
+    }
+    function verifyLogin(u,p)
+    {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () 
+        {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            {
+                if(xmlhttp.responseText=="true")
+                {
+                  startApp();
+                }
+                else
+                {
+                  clearPwd();
+                }
+            }
+        }
+        xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + u + "&p=" + p, true);
+        xmlhttp.send();
     }
     function startApp()
     {
