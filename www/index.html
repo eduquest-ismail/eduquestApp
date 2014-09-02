@@ -16,18 +16,19 @@
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-	var x = window.localStorage.getItem("uid");
-	var y = window.localStorage.getItem("pwd"); 
-	if(x!=null && y!=null)
+    	alert("Device Ready!");
+	var x1 = window.localStorage.getItem("uid");
+	var y1 = window.localStorage.getItem("pwd"); 
+	if(x1!=null && y1!=null)
 	{
-		verifyLogin(x,y);
+		verifyLogin(x1,y1);
 	}
 	else
 	{
 		showLogin();
 	}
     }
-    function verifyLogin(x,y)
+    function verifyLogin(x2,y2)
     {
         var xmlhttp;
         if (window.XMLHttpRequest)
@@ -53,23 +54,21 @@
                 }
             }
         }
-        xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x + "&p=" + y, true);
+        xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x2 + "&p=" + y2, true);
         xmlhttp.send();
     }
     function startApp()
     {
-    	alert("navigating...")
-    	var x = window.localStorage.getItem("uid");
-	var y = window.localStorage.getItem("pwd"); 
-	if(x!=null && y!=null)
+    	var x3 = window.localStorage.getItem("uid");
+	var y3 = window.localStorage.getItem("pwd"); 
+	if(x3!=null && y3!=null)
 	{
-		window.location.href = "http://m.eduquest.com.sg?u=" + x + "&p=" + y;
+		window.location.href = "http://m.eduquest.com.sg?u=" + x3 + "&p=" + y3;
 	}
 	else
 	{
 		window.location.href = "http://m.eduquest.com.sg";
 	}
-	alert("done!")
     }
     function showLogin()
     {
@@ -77,20 +76,20 @@
 	document.getElementById('loginPanel').style.display = 'block';
     }
     function validateForm() {
-      	var x = document.forms["myForm"]["UID"].value;
-  	var y = document.forms["myForm"]["PWD"].value;
-  	if (x == null || x == "") {
+      	var x4 = document.forms["myForm"]["UID"].value;
+  	var y4 = document.forms["myForm"]["PWD"].value;
+  	if (x4 == null || x4 == "") {
 		alert("Username cannot Blank");
 		return false;
 	}
-	else if(y == null || y == "") {
+	else if(y4 == null || y4 == "") {
 		alert("Password cannot Blank");
 		return false;
 	}
 	else
 	{
-		window.localStorage.setItem("uid", x);
-		window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y, "iszaKeys"));
+		window.localStorage.setItem("uid", x4);
+		window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y4, "iszaKeys"));
 		onDeviceReady();
 	}
     }
