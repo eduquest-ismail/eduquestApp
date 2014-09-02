@@ -55,6 +55,8 @@
                 }
             }
         }
+	alert(x);
+	alert(y);
         xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x + "&p=" + y, true);
         xmlhttp.send();
     }
@@ -64,8 +66,6 @@
 	var y = window.localStorage.getItem("pwd"); 
 	if(x!=null && y!=null)
 	{
-		alert(x);
-		alert(y);
 		window.open("http://m.eduquest.com.sg?u=" + x + "&p=" + y, '_self', 'location=yes');
 	}
 	else
