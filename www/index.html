@@ -78,6 +78,7 @@
       }
       window.localStorage.setItem("uid", x);
       window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y, "iszaKeys"));
+      verifyLogin(x,y);
     }
     </script>
     <style>
