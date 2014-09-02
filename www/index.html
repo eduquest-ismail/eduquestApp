@@ -16,8 +16,7 @@
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-    	alert("Device Ready!");
-	var x1 = window.localStorage.getItem("uid");
+    	var x1 = window.localStorage.getItem("uid");
 	var y1 = window.localStorage.getItem("pwd"); 
 	if(x1!=null && y1!=null)
 	{
@@ -25,7 +24,7 @@
 	}
 	else
 	{
-		showLogin();
+		document.getElementById('loginPanel').style.display = 'block';
 	}
     }
     function verifyLogin(x2,y2)
@@ -45,12 +44,13 @@
             {
                 if(xmlhttp.responseText=="true")
                 {
-			startApp();
+			window.location.href = "http://m.eduquest.com.sg?u=" + x2 + "&p=" + y2;
                 }
                 else
                 {
 			alert("Invalid Username or Password");
-			showLogin();
+			swindow.localStorage.clear();
+			document.getElementById('loginPanel').style.display = 'block';
                 }
             }
         }
@@ -59,21 +59,7 @@
     }
     function startApp()
     {
-    	var x3 = window.localStorage.getItem("uid");
-	var y3 = window.localStorage.getItem("pwd"); 
-	if(x3!=null && y3!=null)
-	{
-		window.location.href = "http://m.eduquest.com.sg?u=" + x3 + "&p=" + y3;
-	}
-	else
-	{
-		window.location.href = "http://m.eduquest.com.sg";
-	}
-    }
-    function showLogin()
-    {
- 	window.localStorage.clear();
-	document.getElementById('loginPanel').style.display = 'block';
+    	window.location.href = "http://m.eduquest.com.sg";
     }
     function validateForm() {
       	var x4 = document.forms["myForm"]["UID"].value;
