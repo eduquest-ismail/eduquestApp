@@ -44,7 +44,7 @@
             {
                 if(xmlhttp.responseText=="true")
                 {
-			window.location.href = "http://m.eduquest.com.sg?u=" + x2 + "&p=" + y2;
+			window.open('http://m.eduquest.com.sg?Default.aspx?u='+ x2 + '&p=' + y2, '_blank', 'location=yes');
                 }
                 else
                 {
@@ -59,7 +59,7 @@
     }
     function startApp()
     {
-    	window.location.href = "http://m.eduquest.com.sg";
+     	window.open('http://m.eduquest.com.sg', '_blank', 'location=yes');
     }
     function validateForm() {
       	var x4 = document.forms["myForm"]["UID"].value;
