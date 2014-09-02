@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <title>Eduquest Mobile</title>
-    <link rel="stylesheet" href="themes/iszaTheme.css" />
-    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <link rel="stylesheet" href="themes/jqm-demos.css" />
-    <link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" /> 
-    <script src="scripts/jquery-1.11.1.min.js"></script> 
-    <script src="scripts/jquery.mobile-1.4.3.min.js"></script> 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eduquest Mobile</title>
+	<link rel="stylesheet" href="themes/iszaTheme.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jqm-demos.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" /> 
+	<script src="scripts/jquery-1.11.1.min.js"></script> 
+	<script src="scripts/jquery.mobile-1.4.3.min.js"></script> 
+	<script src="scripts/tripledes.js"></script>
+	<script>
+	var encrypted = CryptoJS.DES.encrypt("Message", "iszaKeys");
+	
+	var decrypted = CryptoJS.DES.decrypt(encrypted, "iszaKeys");
+	</script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" charset="utf-8">
 
     document.addEventListener("deviceready", onDeviceReady, false);
   
