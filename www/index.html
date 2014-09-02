@@ -44,21 +44,23 @@
             {
                 if(xmlhttp.responseText=="true")
                 {
-                  startApp(x,y);
+			window.localStorage.setItem("uid", x);
+			window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y, "iszaKeys"));
+			startApp();
                 }
                 else
                 {
-        	  alert("Invalid Username or Password");
-                  clearPwd();
+			alert("Invalid Username or Password");
+			clearPwd();
                 }
             }
         }
         xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x + "&p=" + y, true);
         xmlhttp.send();
     }
-    function startApp(x,y)
+    function startApp()
     {
-      window.open("http://m.eduquest.com.sg?u=" + x + "&p=" + y, '_self', 'location=yes');
+	window.open("http://m.eduquest.com.sg?u=" + window.localStorage.getItem("uid") + "&p=" + window.localStorage.getItem("pwd"), '_self', 'location=yes');
     }
     function clearPwd()
     {
@@ -66,19 +68,20 @@
       document.getElementById('loginPanel').style.display = 'block';
     }
     function validateForm() {
-      var x = document.forms["myForm"]["UID"].value;
-      if (x == null || x == "") {
-          alert("Username cannot Blank");
-          return false;
-      }
-      var y = document.forms["myForm"]["PWD"].value;
-      if (y == null || y == "") {
-          alert("Password cannot Blank");
-          return false;
-      }
-      window.localStorage.setItem("uid", x);
-      window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y, "iszaKeys"));
-      verifyLogin(x,y);
+      	var x = document.forms["myForm"]["UID"].value;
+  	var y = document.forms["myForm"]["PWD"].value;
+  	if (x == null || x == "") {
+		alert("Username cannot Blank");
+		return false;
+	}
+	else if(y == null || y == "") {
+		alert("Password cannot Blank");
+		return false;
+	}
+	else
+	{
+		verifyLogin(x,y);
+	}
     }
     </script>
     <style>
