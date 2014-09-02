@@ -11,19 +11,13 @@
 	<script src="scripts/jquery-1.11.1.min.js"></script> 
 	<script src="scripts/jquery.mobile-1.4.3.min.js"></script> 
 	<script src="scripts/tripledes.js"></script>
-	<script>
-	var encrypted = CryptoJS.DES.encrypt("Message", "iszaKeys");
-	
-	var decrypted = CryptoJS.DES.decrypt(encrypted, "iszaKeys");
-	</script>
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8">
 
     document.addEventListener("deviceready", onDeviceReady, false);
-  
     function onDeviceReady() {
       var x = window.localStorage.getItem("uid");
-      var y = window.localStorage.getItem("pwd");
+      var y = window.localStorage.getItem("pwd"); 
        if(x!=null && y!=null)
        {
          verifyLogin(x,y);
@@ -33,7 +27,7 @@
          clearPwd();
        }
     }
-    function verifyLogin(u,p)
+    function verifyLogin(x,y)
     {
         var xmlhttp;
         if (window.XMLHttpRequest)
@@ -50,7 +44,7 @@
             {
                 if(xmlhttp.responseText=="true")
                 {
-                  startApp();
+                  startApp(x,y);
                 }
                 else
                 {
@@ -58,12 +52,12 @@
                 }
             }
         }
-        xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + u + "&p=" + p, true);
+        xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x + "&p=" + y, true);
         xmlhttp.send();
     }
-    function startApp()
+    function startApp(x,y)
     {
-      window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+      window.open("http://m.eduquest.com.sg?u=" + x + "&p=" + y, '_self', 'location=yes');
     }
     function clearPwd()
     {
@@ -82,7 +76,7 @@
           return false;
       }
       window.localStorage.setItem("uid", x);
-      window.localStorage.setItem("pwd", y);
+      window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y, "iszaKeys"););
     }
     </script>
     <style>
