@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" /> 
 	<script src="scripts/jquery-1.11.1.min.js"></script> 
 	<script src="scripts/jquery.mobile-1.4.3.min.js"></script> 
-	<script src="scripts/tripledes.js"></script>
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8">
 
@@ -75,7 +74,7 @@
 	else
 	{
 		window.localStorage.setItem("uid", x4);
-		window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y4, "iszaKeys"));
+		window.localStorage.setItem("pwd", y4);
 	}
     }
     </script>
