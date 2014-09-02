@@ -45,7 +45,7 @@
                 if(xmlhttp.responseText=="true")
                 {
 			window.localStorage.setItem("uid", x);
-			window.localStorage.setItem("pwd", CryptoJS.DES.encrypt(y, "iszaKeys"));
+			window.localStorage.setItem("pwd", y);
 			startApp();
                 }
                 else
@@ -91,7 +91,7 @@
 	}
 	else
 	{
-		verifyLogin(x,y);
+		verifyLogin(x,CryptoJS.DES.encrypt(y, "iszaKeys"));
 	}
     }
     </script>
