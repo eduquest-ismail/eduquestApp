@@ -55,23 +55,23 @@
                 }
             }
         }
-	alert(x);
-	alert(y);
         xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x + "&p=" + y, true);
         xmlhttp.send();
     }
     function startApp()
     {
+    	alert("navigating...")
     	var x = window.localStorage.getItem("uid");
 	var y = window.localStorage.getItem("pwd"); 
 	if(x!=null && y!=null)
 	{
-		window.open("http://m.eduquest.com.sg?u=" + x + "&p=" + y, '_self', 'location=yes');
+		window.location.href = "http://m.eduquest.com.sg?u=" + x + "&p=" + y;
 	}
 	else
 	{
-		window.open("http://m.eduquest.com.sg", '_self', 'location=yes');
+		window.location.href = "http://m.eduquest.com.sg";
 	}
+	alert("done!")
     }
     function showLogin()
     {
