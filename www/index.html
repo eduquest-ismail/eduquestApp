@@ -16,19 +16,21 @@
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-      var x = window.localStorage.getItem("uid");
-      var y = window.localStorage.getItem("pwd"); 
-       if(x!=null && y!=null)
-       {
-         verifyLogin(x,y);
-       }
-       else
-       {
-         clearPwd();
-       }
+	alert("Device Ready!")
+	var x = window.localStorage.getItem("uid");
+	var y = window.localStorage.getItem("pwd"); 
+	if(x!=null && y!=null)
+	{
+		verifyLogin(x,y);
+	}
+	else
+	{
+		showLogin();
+	}
     }
     function verifyLogin(x,y)
     {
+    	alert("Verifying !")
         var xmlhttp;
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -51,7 +53,7 @@
                 else
                 {
 			alert("Invalid Username or Password");
-			clearPwd();
+			showLogin();
                 }
             }
         }
@@ -60,14 +62,17 @@
     }
     function startApp()
     {
+    	alert("Starting App !")
 	window.open("http://m.eduquest.com.sg?u=" + window.localStorage.getItem("uid") + "&p=" + window.localStorage.getItem("pwd"), '_self', 'location=yes');
     }
-    function clearPwd()
+    function showLogin()
     {
-      window.localStorage.clear();
-      document.getElementById('loginPanel').style.display = 'block';
+    	alert("Show Login !")
+	window.localStorage.clear();
+	document.getElementById('loginPanel').style.display = 'block';
     }
     function validateForm() {
+    	alert("Validating Form !")
       	var x = document.forms["myForm"]["UID"].value;
   	var y = document.forms["myForm"]["PWD"].value;
   	if (x == null || x == "") {
