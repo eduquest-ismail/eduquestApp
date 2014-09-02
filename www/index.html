@@ -16,7 +16,6 @@
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-	alert("Device Ready!")
 	var x = window.localStorage.getItem("uid");
 	var y = window.localStorage.getItem("pwd"); 
 	if(x!=null && y!=null)
@@ -30,7 +29,6 @@
     }
     function verifyLogin(x,y)
     {
-    	alert("Verifying !")
         var xmlhttp;
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -62,17 +60,25 @@
     }
     function startApp()
     {
-    	alert("Starting App !")
-	window.open("http://m.eduquest.com.sg?u=" + window.localStorage.getItem("uid") + "&p=" + window.localStorage.getItem("pwd"), '_self', 'location=yes');
+    	var x = window.localStorage.getItem("uid");
+	var y = window.localStorage.getItem("pwd"); 
+	if(x!=null && y!=null)
+	{
+		alert(x);
+		alert(y);
+		window.open("http://m.eduquest.com.sg?u=" + x + "&p=" + y, '_self', 'location=yes');
+	}
+	else
+	{
+		window.open("http://m.eduquest.com.sg", '_self', 'location=yes');
+	}
     }
     function showLogin()
     {
-    	alert("Show Login !")
-	window.localStorage.clear();
+ 	window.localStorage.clear();
 	document.getElementById('loginPanel').style.display = 'block';
     }
     function validateForm() {
-    	alert("Validating Form !")
       	var x = document.forms["myForm"]["UID"].value;
   	var y = document.forms["myForm"]["PWD"].value;
   	if (x == null || x == "") {
