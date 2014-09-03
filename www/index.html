@@ -84,14 +84,14 @@
     <style>
       .bg
       {
-          background: rgba(255,203,140,1);
-          background: -moz-radial-gradient(center, ellipse cover, rgba(255,203,140,1) 0%, rgba(255,146,10,1) 100%);
-          background: -webkit-gradient(radial, center center, 0px, center center, 100%, , color-stop(0%, rgba(255,203,140,1)), color-stop(100%, rgba(255,146,10,1)));
-          background: -webkit-radial-gradient(center, ellipse cover, rgba(255,203,140,1) 0%, rgba(255,146,10,1) 100%);
-          background: -o-radial-gradient(center, ellipse cover, rgba(255,203,140,1) 0%, rgba(255,146,10,1) 100%);
-          background: -ms-radial-gradient(center, ellipse cover, rgba(255,203,140,1) 0%, rgba(255,146,10,1) 100%);
-          background: radial-gradient(ellipse at center, rgba(255,203,140,1) 0%, rgba(255,146,10,1) 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcb8c', endColorstr='#ff920a', GradientType=1 );
+		background: #f2c18a; /* Old browsers */
+		background: -moz-radial-gradient(center, ellipse cover,  #f2c18a 0%, #f89828 99%); /* FF3.6+ */
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2c18a), color-stop(99%,#f89828)); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover,  #f2c18a 0%,#f89828 99%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover,  #f2c18a 0%,#f89828 99%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover,  #f2c18a 0%,#f89828 99%); /* IE10+ */
+		background: radial-gradient(ellipse at center,  #f2c18a 0%,#f89828 99%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2c18a', endColorstr='#f89828',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       }
     </style>
   </head>
