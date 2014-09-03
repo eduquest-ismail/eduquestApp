@@ -76,10 +76,9 @@
 	        else {
 	            window.localStorage.setItem("uid", x4);
 	            window.localStorage.setItem("pwd", y4);
-	            $("#loginPanel").hide("slow", "swing", function () {
-	            	onDeviceReady();
-	            	return false;
-                    }); 
+	                  $("#loginPanel").hide("slow", "swing", function () {
+	                        $("#logoPanel").hide("slow", "swing", function () {
+	                        });
 	        }
 	    }
     </script>
