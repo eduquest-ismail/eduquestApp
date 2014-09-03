@@ -14,5 +14,5 @@
     <gap:platform name="android" />
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <content src="index.html" />
-    <access origin="http://m.eduquest.com.sg" subdomains="true" />
+    <access origin="*" />
 </widget>
