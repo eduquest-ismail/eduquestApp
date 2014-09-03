@@ -16,6 +16,7 @@
 	    document.addEventListener("deviceready", onDeviceReady, false);
 	    function onDeviceReady() {
 	        $("#logoPanel").show("slow", "swing", function () {
+        		alert("Retrieve"..");
 	            var x1 = window.localStorage.getItem("uid");
 	            var y1 = window.localStorage.getItem("pwd");
 	            if (x1 != null && y1 != null) {
@@ -76,9 +77,7 @@
 	        else {
 	            window.localStorage.setItem("uid", x4);
 	            window.localStorage.setItem("pwd", y4);
-	                  $("#loginPanel").hide("slow", "swing", function () {
-	                        $("#logoPanel").hide("slow", "swing", function () {
-	                        });
+	            alert("Store..");
 	        }
 	    }
     </script>
