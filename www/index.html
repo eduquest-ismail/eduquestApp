@@ -40,7 +40,14 @@
 	                if (xmlhttp.responseText == "true") {
 	                    $("#loginPanel").hide("slow", "swing", function () {
 	                        $("#logoPanel").hide("slow", "swing", function () {
-	                            window.open('http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2, '_self', 'location=yes');
+	                            	var ref = window.open('http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2, '_blank', 'location=no');
+					ref.addEventListener('loadstart', function(event) { 
+					    var urlSuccessPage = "http://m.eduquest.com.sg/login.aspx";
+					    if (event.url == urlSuccessPage) {
+					    ref.close();   
+					    onDeviceReady();
+					    }
+					});
 	                        });
 	                    });  
 	                 }
@@ -58,7 +65,14 @@
 	    function startApp() {
 	        $("#loginPanel").hide("slow", "swing", function () {
 	            $("#logoPanel").hide("slow", "swing", function () {
-	                window.open('http://m.eduquest.com.sg', '_self', 'location=yes');
+	          	var ref = window.open('http://m.eduquest.com.sg', '_blank', 'location=no');
+			ref.addEventListener('loadstart', function(event) { 
+			    var urlSuccessPage = "http://m.eduquest.com.sg/login.aspx";
+			    if (event.url == urlSuccessPage) {
+			    ref.close();   
+			    onDeviceReady();
+			    }
+			});
 	            });
 	        });     
 	    }
