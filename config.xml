@@ -11,11 +11,8 @@
     <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
         Mohamed Ismail
     </author>
-    <gap:platform name="ios" />
     <gap:platform name="android" />
-    <preference name="Fullscreen" value="true" />
-    <preference name="BackgroundColor" value="0xff0000ff"/>
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="http://m.eduquest.com.sg" subdomains="true" />
 </widget>
