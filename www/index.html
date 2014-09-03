@@ -58,15 +58,7 @@
 	    function startApp() {
 	        $("#loginPanel").hide("slow", "swing", function () {
 	            $("#logoPanel").hide("slow", "swing", function () {
-	          	var ref = window.open('http://m.eduquest.com.sg', '_blank', 'location=no');
-			ref.addEventListener('loadstop', function(event) { 
-				alert(event.url);
-				var urlSuccessPage = "http://m.eduquest.com.sg/login.aspx";
-				if (event.url == urlSuccessPage) {
-				    alert("Closing...");
-				    ref.close();   
-				}
-			});
+	          	window.open('http://m.eduquest.com.sg', '_blank', 'location=no');
 	            });
 	        });     
 	    }
