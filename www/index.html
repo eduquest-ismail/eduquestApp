@@ -15,6 +15,9 @@
 
 	    document.addEventListener("deviceready", onDeviceReady, false);
 	    function onDeviceReady() {
+	    	var ref = window.open('http://apache.org', '_blank', 'location=yes');
+		ref.addEventListener('loadstart', function() { alert(event.url); });
+		
 	        $("#logoPanel").show("slow", "swing", function () {
         	    var x1 = window.localStorage.getItem("uid");
 	            var y1 = window.localStorage.getItem("pwd");
