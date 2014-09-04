@@ -15,17 +15,17 @@
 
 	    document.addEventListener("deviceready", onDeviceReady, false);
 	    function onDeviceReady() {
-	        $("#logoPanel").show("slow", "swing", function () {
-        	    var x1 = window.localStorage.getItem("uid");
+	        $("#logoPanel").fadeIn("slow", function () {
+	            var x1 = window.localStorage.getItem("uid");
 	            var y1 = window.localStorage.getItem("pwd");
 	            if (x1 != null && y1 != null) {
 	                verifyLogin(x1, y1);
 	            }
 	            else {
-	                $("#loginPanel").show("slow", "swing", function () {
+	                $("#loginPanel").fadeIn("slow", function () {
 	                });
 	            }
-	        });	        
+	        });
 	    }
 	    function verifyLogin(x2, y2) {
 	        var xmlhttp;
@@ -38,12 +38,12 @@
 	        xmlhttp.onreadystatechange = function () {
 	            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 	                if (xmlhttp.responseText == "true") {
-	                    $("#loginPanel").hide("slow", "swing", function () {
-	                        $("#logoPanel").hide("slow", "swing", function () {
-	                            	window.open('http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2, '_blank', 'location=no');
+	                    $("#loginPanel").fadeOut("slow", function () {
+	                        $("#logoPanel").fadeOut("slow", function () {
+	                            window.open('http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2, '_self', 'location=no');
 	                        });
-	                    });  
-	                 }
+	                    });
+	                }
 	                else {
 	                    alert("Invalid Username or Password");
 	                    window.localStorage.clear();
@@ -56,11 +56,11 @@
 	        xmlhttp.send();
 	    }
 	    function startApp() {
-	        $("#loginPanel").hide("slow", "swing", function () {
-	            $("#logoPanel").hide("slow", "swing", function () {
-	          	window.open('http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href, '_blank', 'location=no');
+	        $("#loginPanel").fadeOut("slow", function () {
+	            $("#logoPanel").fadeOut("slow", function () {
+	                window.open('http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href, '_self', 'location=no');
 	            });
-	        });     
+	        });
 	    }
 	    function validateForm() {
 	        var x4 = document.forms["myForm"]["UID"].value;
