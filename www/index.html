@@ -14,16 +14,16 @@
 	<script type="text/javascript" charset="utf-8">
 	    document.addEventListener("deviceready", onDeviceReady, false);
 	    document.addEventListener("menubutton", function () {
-	        $("menuPanel").panel( "open" );
+	        $("#menuPanel").panel( "open" );
 	    }, false);
 	    function showLogin() {
-	    	 $("menuPanel").panel( "close" );
+	    	 $("#menuPanel").panel( "close" );
 	        $("#pageWindow").fadeOut("fast", function () {
 	            onDeviceReady();
 	        });
 	    }
 	    function logout() {
-	    	 $("menuPanel").panel( "close" );
+	    	 $("#menuPanel").panel( "close" );
 	        $("#pageWindow").fadeOut("fast", function () {
 	            window.localStorage.clear();
 	            $("#logoPanel").fadeIn("fast", function () {
