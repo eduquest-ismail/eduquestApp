@@ -11,6 +11,7 @@
 	<script src="scripts/jquery-1.11.1.min.js"></script> 
 	<script src="scripts/jquery.mobile-1.4.3.min.js"></script> 
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
 	<script type="text/javascript" charset="utf-8">
 
     	document.addEventListener("deviceready", onDeviceReady, false);
@@ -74,6 +75,7 @@
 	    function startApp() {
 	        $("#loginPanel").fadeOut("slow", function () {
 	            $("#logoPanel").fadeOut("slow", function () {
+	            	window.plugins.childBrowser.showWebPage('http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href, { showLocationBar: true });
 	                //window.open('http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href, '_self', 'location=no');
 	            });
 	        });
