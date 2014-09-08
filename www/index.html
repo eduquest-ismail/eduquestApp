@@ -12,29 +12,36 @@
 	<script src="scripts/jquery.mobile-1.4.3.min.js"></script> 
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8">
-    	document.addEventListener("deviceready", onDeviceReady, false);
-    	document.addEventListener("menubutton", function () {
-    		$('#mainMenu a').trigger('click');
-    	}, false);
-    	function showLogin() {
-		$("#pageWindow").fadeOut("fast", function () {
-		 	onDeviceReady();
-    		});
-    	}
-	function onDeviceReady() {
-	    	       $("#logoPanel").fadeIn("fast", function () {
-		            var x1 = window.localStorage.getItem("uid");
-		            var y1 = window.localStorage.getItem("pwd");
-		            if (x1 != null && y1 != null) {
-		                verifyLogin(x1, y1);
-		            }
-		            else {
-		                $("#loginPanel").fadeIn("fast", function () {
-		                });
-		            }
-		        });
+	    document.addEventListener("deviceready", onDeviceReady, false);
+	    document.addEventListener("menubutton", function () {
+	        $('#mainMenu a').trigger('click');
+	    }, false);
+	    function showLogin() {
+	        $("#pageWindow").fadeOut("fast", function () {
+	            onDeviceReady();
+	        });
 	    }
-       	function verifyLogin(x2, y2) {
+	    function logout() {
+	        $("#pageWindow").fadeOut("fast", function () {
+	            window.localStorage.clear();
+                    $("#loginPanel").show("fast", function () {
+                    });
+	        });
+	    }
+	    function onDeviceReady() {
+	        $("#logoPanel").fadeIn("fast", function () {
+	            var x1 = window.localStorage.getItem("uid");
+	            var y1 = window.localStorage.getItem("pwd");
+	            if (x1 != null && y1 != null) {
+	                verifyLogin(x1, y1);
+	            }
+	            else {
+	                $("#loginPanel").fadeIn("fast", function () {
+	                });
+	            }
+	        });
+	    }
+	    function verifyLogin(x2, y2) {
 	        var xmlhttp;
 	        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 	            xmlhttp = new XMLHttpRequest();
@@ -47,16 +54,16 @@
 	                if (xmlhttp.responseText == "true") {
 	                    $("#loginPanel").fadeOut("fast", function () {
 	                        $("#logoPanel").fadeOut("fast", function () {
-	        	 		document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2;
-        	        	 	$("#pageWindow").fadeIn("fast", function () {
-                			});
+	                            document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2;
+	                            $("#pageWindow").fadeIn("fast", function () {
+	                            });
 	                        });
 	                    });
 	                }
 	                else {
 	                    alert("Invalid Username or Password");
 	                    window.localStorage.clear();
-	                    $("#loginPanel").show("fast",  function () {
+	                    $("#loginPanel").show("fast", function () {
 	                    });
 	                }
 	            }
@@ -67,9 +74,9 @@
 	    function startApp() {
 	        $("#loginPanel").fadeOut("fast", function () {
 	            $("#logoPanel").fadeOut("fast", function () {
-  			document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href;
-            		$("#pageWindow").fadeIn("fast", function () {
-      			});
+	                document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href;
+	                $("#pageWindow").fadeIn("fast", function () {
+	                });
 	            });
 	        });
 	    }
@@ -109,10 +116,13 @@
   <body>
     <div data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
     	<div id="mainMenu" style='display:none;'>
-    		<a  href="menu.html" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">Main Menu</a>
+    		<a  href="#menuPanel" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">Main Menu</a>
     	</div>
-    	<div data-role="panel" id="mypanel">
-	    <!-- panel content goes here -->
+    	<div data-role="panel" id="menuPanel" data-position="left" data-display="overlay" data-theme="a">
+    		<a href="#" onclick="showLogin();" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Sign-In</a>
+    		<a href="#" onclick="logout();" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Sign-Out</a>
+		<a href="#" onclick="navigator.app.exitApp();" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Exit</a>
+		<a href="#demo-links" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline">Close Menu</a>
 	</div>
     	<div id="pageWindow" style="margin: 0px;padding :0px;display:none;">
     		<iframe id="pageFrame" style="width:100%;min-height: 100%;margin: 0px;padding: 0px;" frameBorder="0" scrolling="no" ></iframe>
