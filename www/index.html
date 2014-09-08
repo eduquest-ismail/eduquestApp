@@ -13,7 +13,9 @@
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8">
     	document.addEventListener("deviceready", onDeviceReady, false);
-    	document.addEventListener("menubutton", onDeviceReady, false);
+    	document.addEventListener("menubutton", function () {
+    		document.getElementById('mainMenu').click();
+    	}, false);
 	function onDeviceReady() {
     		$("#pageWindow").fadeOut("slow", function () {
 		        $("#logoPanel").fadeIn("slow", function () {
@@ -103,6 +105,7 @@
   </head>
   <body>
     <div data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
+    	<a id="mainMenu" href="menu.html" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop" style='display:none;'>Main Menu</a>
     	<div id="pageWindow" style="margin: 0px;padding :0px;display:none;">
     		<iframe id="pageFrame" style="width:100%;min-height: 100%;margin: 0px;padding: 0px;" frameBorder="0" scrolling="no" ></iframe>
     	</div>
