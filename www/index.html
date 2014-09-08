@@ -12,13 +12,9 @@
 	<script src="scripts/jquery.mobile-1.4.3.min.js"></script> 
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8">
-
     	document.addEventListener("deviceready", onDeviceReady, false);
     	document.addEventListener("menubutton", onDeviceReady, false);
-	document.addEventListener("backbutton", function () {
-	             navigator.app.exitApp();
-	        }, false);
-    	function onDeviceReady() {
+	function onDeviceReady() {
     		$("#pageWindow").fadeOut("slow", function () {
 		        $("#logoPanel").fadeIn("slow", function () {
 		            var x1 = window.localStorage.getItem("uid");
