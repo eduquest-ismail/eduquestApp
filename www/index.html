@@ -19,17 +19,19 @@
 	            exitAppPopup();
 	        }, false);
     	function onDeviceReady() {
-	        $("#logoPanel").fadeIn("slow", function () {
-	            var x1 = window.localStorage.getItem("uid");
-	            var y1 = window.localStorage.getItem("pwd");
-	            if (x1 != null && y1 != null) {
-	                verifyLogin(x1, y1);
-	            }
-	            else {
-	                $("#loginPanel").fadeIn("slow", function () {
-	                });
-	            }
-	        });
+    		$("#pageWindow").fadeOut("slow", function () {
+		        $("#logoPanel").fadeIn("slow", function () {
+		            var x1 = window.localStorage.getItem("uid");
+		            var y1 = window.localStorage.getItem("pwd");
+		            if (x1 != null && y1 != null) {
+		                verifyLogin(x1, y1);
+		            }
+		            else {
+		                $("#loginPanel").fadeIn("slow", function () {
+		                });
+		            }
+		        });
+    		});
 	    }
     	function exitAppPopup() {
 	        navigator.notification.confirm('Exit Eduquest Mobile?'
