@@ -24,8 +24,10 @@
 	    function logout() {
 	        $("#pageWindow").fadeOut("fast", function () {
 	            window.localStorage.clear();
-                    $("#loginPanel").show("fast", function () {
-                    });
+	            $("#logoPanel").fadeIn("fast", function () {
+	                    $("#loginPanel").show("fast", function () {
+	                    });
+	            });
 	        });
 	    }
 	    function onDeviceReady() {
