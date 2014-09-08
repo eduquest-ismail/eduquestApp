@@ -13,8 +13,6 @@
     </author>
     <gap:platform name="android" />
     <gap:platform name="ios" />
-    <plugin name="Notification" value="CDVNotification" />
-    <plugin name="Notification" value="org.apache.cordova.Notification"/>
     <content src="index.html" />
     <access origin="*" />
 </widget>
