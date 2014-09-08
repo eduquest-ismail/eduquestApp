@@ -16,20 +16,23 @@
     	document.addEventListener("menubutton", function () {
     		$('#mainMenu a').trigger('click');
     	}, false);
+    	function showLogin() {
+		$("#pageWindow").fadeOut("fast", function () {
+		 	onDeviceReady();
+    		});
+    	}
 	function onDeviceReady() {
-    		$("#pageWindow").fadeOut("slow", function () {
-		        $("#logoPanel").fadeIn("slow", function () {
+	    	       $("#logoPanel").fadeIn("fast", function () {
 		            var x1 = window.localStorage.getItem("uid");
 		            var y1 = window.localStorage.getItem("pwd");
 		            if (x1 != null && y1 != null) {
 		                verifyLogin(x1, y1);
 		            }
 		            else {
-		                $("#loginPanel").fadeIn("slow", function () {
+		                $("#loginPanel").fadeIn("fast", function () {
 		                });
 		            }
 		        });
-    		});
 	    }
        	function verifyLogin(x2, y2) {
 	        var xmlhttp;
@@ -42,10 +45,10 @@
 	        xmlhttp.onreadystatechange = function () {
 	            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 	                if (xmlhttp.responseText == "true") {
-	                    $("#loginPanel").fadeOut("slow", function () {
-	                        $("#logoPanel").fadeOut("slow", function () {
+	                    $("#loginPanel").fadeOut("fast", function () {
+	                        $("#logoPanel").fadeOut("fast", function () {
 	        	 		document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2;
-        	        	 	$("#pageWindow").fadeIn("slow", function () {
+        	        	 	$("#pageWindow").fadeIn("fast", function () {
                 			});
 	                        });
 	                    });
@@ -53,7 +56,7 @@
 	                else {
 	                    alert("Invalid Username or Password");
 	                    window.localStorage.clear();
-	                    $("#loginPanel").show("slow", "swing", function () {
+	                    $("#loginPanel").show("fast",  function () {
 	                    });
 	                }
 	            }
@@ -62,10 +65,10 @@
 	        xmlhttp.send();
 	    }
 	    function startApp() {
-	        $("#loginPanel").fadeOut("slow", function () {
-	            $("#logoPanel").fadeOut("slow", function () {
+	        $("#loginPanel").fadeOut("fast", function () {
+	            $("#logoPanel").fadeOut("fast", function () {
   			document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href;
-            		$("#pageWindow").fadeIn("slow", function () {
+            		$("#pageWindow").fadeIn("fast", function () {
       			});
 	            });
 	        });
