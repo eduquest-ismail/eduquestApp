@@ -34,16 +34,7 @@
     		});
 	    }
     	function exitAppPopup() {
-	        navigator.notification.confirm('Exit Eduquest Mobile?'
-                , function (button) {
-                    if (button == 2) {
-                        navigator.app.exitApp();
-                    }
-                }
-                , 'Exit'
-                , 'No,Yes'
-            );
-	        return false;
+	       navigator.app.exitApp();
 	    }
     	function verifyLogin(x2, y2) {
 	        var xmlhttp;
@@ -119,7 +110,7 @@
   </head>
   <body>
     <div data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a
-    	<div id="pageWindow" style="margin: 0px;padding :0px;">
+    	<div id="pageWindow" style="margin: 0px;padding :0px;display:none;">
     		<iframe style="width:100%;min-height: 100%;margin: 0px;padding: 0px;" frameBorder="0" scrolling="no" src="http://m.eduquest.com.sg"></iframe>
     	</div>
         <div id="logoPanel" style="margin:25px 0 0 0;display:none;">
