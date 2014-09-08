@@ -14,14 +14,16 @@
 	<script type="text/javascript" charset="utf-8">
 	    document.addEventListener("deviceready", onDeviceReady, false);
 	    document.addEventListener("menubutton", function () {
-	        $('#mainMenu a').trigger('click');
+	        $("menuPanel").panel( "open" );
 	    }, false);
 	    function showLogin() {
+	    	 $("menuPanel").panel( "close" );
 	        $("#pageWindow").fadeOut("fast", function () {
 	            onDeviceReady();
 	        });
 	    }
 	    function logout() {
+	    	 $("menuPanel").panel( "close" );
 	        $("#pageWindow").fadeOut("fast", function () {
 	            window.localStorage.clear();
 	            $("#logoPanel").fadeIn("fast", function () {
@@ -124,7 +126,6 @@
     		<a href="#" onclick="showLogin();" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Sign-In</a>
     		<a href="#" onclick="logout();" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Sign-Out</a>
 		<a href="#" onclick="navigator.app.exitApp();" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Exit</a>
-		<a href="#demo-links" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline">Close Menu</a>
 	</div>
     	<div id="pageWindow" style="margin: 0px;padding :0px;display:none;">
     		<iframe id="pageFrame" style="width:100%;min-height: 100%;margin: 0px;padding: 0px;" frameBorder="0" scrolling="no" ></iframe>
