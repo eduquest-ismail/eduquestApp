@@ -13,12 +13,12 @@
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8">
 
-            document.addEventListener("deviceready", onDeviceReady, false);
-	    function onDeviceReady() {
-	        document.addEventListener("menubutton", onDeviceReady(), false);
-	        document.addEventListener("backbutton", function () {
+    	document.addEventListener("deviceready", onDeviceReady, false);
+    	document.addEventListener("menubutton", onDeviceReady(), false);
+	document.addEventListener("backbutton", function () {
 	            exitAppPopup();
 	        }, false);
+    	function onDeviceReady() {
 	        $("#logoPanel").fadeIn("slow", function () {
 	            var x1 = window.localStorage.getItem("uid");
 	            var y1 = window.localStorage.getItem("pwd");
@@ -31,7 +31,7 @@
 	            }
 	        });
 	    }
-	    function exitAppPopup() {
+    	function exitAppPopup() {
 	        navigator.notification.confirm('Exit Eduquest Mobile?'
                 , function (button) {
                     if (button == 2) {
@@ -43,7 +43,7 @@
             );
 	        return false;
 	    }
-	    function verifyLogin(x2, y2) {
+    	function verifyLogin(x2, y2) {
 	        var xmlhttp;
 	        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 	            xmlhttp = new XMLHttpRequest();
