@@ -16,17 +16,7 @@
     	document.addEventListener("deviceready", onDeviceReady, false);
     	document.addEventListener("menubutton", onDeviceReady, false);
 	document.addEventListener("backbutton", function () {
-	             navigator.notification.confirm(
-		            'Exit!',  // message
-		             function (buttonIndex) {
-		             	if(buttonIndex==1)
-		             	{
-		             		 navigator.app.exitApp();	
-		             	}
-		             },              // callback to invoke with index of button pressed
-		            'Eduquest Mobile',            // title
-		            'Exit,Cancel'          // buttonLabels
-		        );
+	             navigator.app.exitApp();
 	        }, false);
     	function onDeviceReady() {
     		$("#pageWindow").fadeOut("slow", function () {
