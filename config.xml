@@ -12,7 +12,7 @@
         Mohamed Ismail
     </author>
     <gap:platform name="android" />
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
