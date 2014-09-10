@@ -58,9 +58,10 @@
 	                if (xmlhttp.responseText == "true") {
 	                    $("#loginPanel").fadeOut("fast", function () {
 	                        $("#logoPanel").fadeOut("fast", function () {
-	                            document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=' + x2 + '&p=' + y2;
-	                            $("#pageWindow").fadeIn("fast", function () {
-	                            });
+	                        	window.open('http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=' + x2 + '&p=' + y2, '_self', 'location=yes');
+	                            //document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=' + x2 + '&p=' + y2;
+	                            //$("#pageWindow").fadeIn("fast", function () {
+	                            //});
 	                        });
 	                    });
 	                }
@@ -78,9 +79,10 @@
 	    function startApp() {
 	        $("#loginPanel").fadeOut("fast", function () {
 	            $("#logoPanel").fadeOut("fast", function () {
-	                document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=&p=';
-	                $("#pageWindow").fadeIn("fast", function () {
-	                });
+	            	window.open('http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=&p=', '_self', 'location=yes');
+	                //document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=&p=';
+	                //$("#pageWindow").fadeIn("fast", function () {
+	                //});
 	            });
 	        });
 	    }
