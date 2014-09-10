@@ -78,13 +78,9 @@
 	    function startApp() {
 	        $("#loginPanel").fadeOut("fast", function () {
 	            $("#logoPanel").fadeOut("fast", function () {
-	            	ref = window.open('http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=&p=', '_blank', 'location=yes');
-	            	ref.addEventListener("menubutton", function () {
-			        $("#menuPanel").panel( "open" );
-			    }, false);
-	                //document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=&p=';
-	                //$("#pageWindow").fadeIn("fast", function () {
-	                //});
+	                document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=&p=';
+	                $("#pageWindow").fadeIn("fast", function () {
+	                });
 	            });
 	        });
 	    }
