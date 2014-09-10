@@ -58,7 +58,7 @@
 	                if (xmlhttp.responseText == "true") {
 	                    $("#loginPanel").fadeOut("fast", function () {
 	                        $("#logoPanel").fadeOut("fast", function () {
-	                            document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?u=' + x2 + '&p=' + y2;
+	                            document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=' + x2 + '&p=' + y2;
 	                            $("#pageWindow").fadeIn("fast", function () {
 	                            });
 	                        });
@@ -78,7 +78,7 @@
 	    function startApp() {
 	        $("#loginPanel").fadeOut("fast", function () {
 	            $("#logoPanel").fadeOut("fast", function () {
-	                document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?lp=' + window.location.href;
+	                document.getElementById('pageFrame').src = 'http://m.eduquest.com.sg/Default.aspx?ReturnUrl=fnb.aspx&u=&p=';
 	                $("#pageWindow").fadeIn("fast", function () {
 	                });
 	            });
@@ -106,14 +106,14 @@
     <style>
       .bg
       {
-		background: #f2c18a; /* Old browsers */
-		background: -moz-radial-gradient(center, ellipse cover,  #f2c18a 0%, #f89828 99%); /* FF3.6+ */
-		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2c18a), color-stop(99%,#f89828)); /* Chrome,Safari4+ */
-		background: -webkit-radial-gradient(center, ellipse cover,  #f2c18a 0%,#f89828 99%); /* Chrome10+,Safari5.1+ */
-		background: -o-radial-gradient(center, ellipse cover,  #f2c18a 0%,#f89828 99%); /* Opera 12+ */
-		background: -ms-radial-gradient(center, ellipse cover,  #f2c18a 0%,#f89828 99%); /* IE10+ */
-		background: radial-gradient(ellipse at center,  #f2c18a 0%,#f89828 99%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2c18a', endColorstr='#f89828',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  	background: #f7f7f7; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f7f7f7 1%, #f9c667 71%, #f79621 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f7f7f7), color-stop(71%,#f9c667), color-stop(100%,#f79621)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f79621',GradientType=0 ); /* IE6-9 */    
       }
     </style>
   </head>
