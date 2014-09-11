@@ -17,10 +17,8 @@
 	        $("#menuPanel").panel("open");
 	    }, false);
 	    function logout() {
-	        $("#loginPanel").fadeIn("fast", function () {
-	            $("#logoutButton").fadeOut("fast", function () {
-	            });
-	        });
+            window.localStorage.clear();
+	        onDeviceReady();
 	    }
 	    function showFNB() {
 	        $("#logoPanel").fadeOut("fast", function () {
