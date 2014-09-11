@@ -38,7 +38,8 @@
 	                $("#menuPanel").panel("open");
 	            }, false);    
         }
-	    function onDeviceReady() {
+        function onDeviceReady() {
+            $("#menuPanel").panel("close");    
 	        $("#logoPanel").fadeIn("fast", function () {
 	            var x1 = window.localStorage.getItem("uid");
 	            var y1 = window.localStorage.getItem("pwd");
@@ -147,10 +148,10 @@
           </form>
         </div>
          <br />
-         <div onclick="logout();" class="ui-body ui-body-a ui-corner-all" style="margin:15px;background:rgb(247,150,70);"> 
-                    <center>
-                    <p style="color:White;">Sign-Out</p>
-                    </center>
+         <div onclick="logout();" id="logoutButton" class="ui-body ui-body-a ui-corner-all" style="margin:15px;background:rgb(247,150,70);"> 
+            <center>
+            <p style="color:White;">Sign-Out</p>
+            </center>
         </div>
         <div onclick="navigator.app.exitApp();" class="ui-body ui-body-a ui-corner-all" style="margin:15px;background:rgb(247,150,70);"> 
             <center>
