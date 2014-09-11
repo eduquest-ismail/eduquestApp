@@ -17,12 +17,8 @@
 	        $("#menuPanel").panel("open");
 	    }, false);
 	    function logout() {
-	        $("#menuPanel").panel("close");
-	        $("#pageWindow").fadeOut("fast", function () {
-	            window.localStorage.clear();
-	            $("#logoPanel").fadeIn("fast", function () {
-	                $("#loginPanel").show("fast", function () {
-	                });
+	        $("#loginPanel").fadeIn("fast", function () {
+	            $("#logoutButton").fadeOut("fast", function () {
 	            });
 	        });
 	    }
@@ -155,10 +151,18 @@
          <br />
         <ul data-role="listview" data-inset="true">        
             <li class="ui-field-contain" id="logoutButton" style="display:none;">
-                <a href="#" onclick="logout();" class="ui-btn">Sign-Out</a>
-	        </li>
+                <div onclick="logout();" class="ui-body ui-body-a ui-corner-all" style="margin:20px;background:rgb(247,150,70);"> 
+                    <center>
+                    <p style="color:White;">Sign-Out</p>
+                    </center>
+                </div>
+            </li>
             <li class="ui-field-contain">
-                <a href="#" onclick="navigator.app.exitApp();" class="ui-btn">Exit</a>
+                <div onclick="navigator.app.exitApp();" class="ui-body ui-body-a ui-corner-all" style="margin:20px;background:rgb(247,150,70);"> 
+                    <center>
+                    <p style="color:White;">Exit</p>
+                    </center>
+                </div>
             </li>            
         </ul>   
     	</div>
