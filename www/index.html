@@ -127,7 +127,7 @@
 
     <div data-role="panel" id="menuPanel" data-position="left" data-display="overlay" data-theme="a">
        	<a  href="#demo-links" style="float:right;" data-rel="close" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-right">Close</a>
-    	<div style="margin:30px;display:none;"  id="loginPanel" >             
+    	<div style="margin:30px 15px 15px 15px;display:none;"  id="loginPanel" >             
           <form name="myForm" onsubmit="return validateForm()">
             <ul data-role="listview" data-inset="true"> 
                  <li class="ui-field-contain">
@@ -142,29 +142,24 @@
                  <li class="ui-field-contain">
                     <input type="password" name="PWD" id="PWD" value="" data-clear-btn="true">
                 </li>
-                 <li class="ui-field-contain">
+                 <li class="ui-field-contain" >
                     <input type="submit" value="LOGIN"> 
                   </li> 
             </ul>            
           </form>
         </div>
          <br />
-        <ul data-role="listview" data-inset="true">        
-            <li class="ui-field-contain" id="logoutButton" style="display:none;">
-                <div onclick="logout();" class="ui-body ui-body-a ui-corner-all" style="margin:20px;background:rgb(247,150,70);"> 
+         <div onclick="logout();" class="ui-body ui-body-a ui-corner-all" style="margin:15px;background:rgb(247,150,70);"> 
                     <center>
                     <p style="color:White;">Sign-Out</p>
                     </center>
-                </div>
-            </li>
-            <li class="ui-field-contain">
-                <div onclick="navigator.app.exitApp();" class="ui-body ui-body-a ui-corner-all" style="margin:20px;background:rgb(247,150,70);"> 
-                    <center>
-                    <p style="color:White;">Exit</p>
-                    </center>
-                </div>
-            </li>            
-        </ul>   
+        </div>
+        <div onclick="navigator.app.exitApp();" class="ui-body ui-body-a ui-corner-all" style="margin:15px;background:rgb(247,150,70);"> 
+            <center>
+            <p style="color:White;">Exit</p>
+            </center>
+        </div>
+    
     	</div>
 
         <div id="logoPanel" style="display:none;">
