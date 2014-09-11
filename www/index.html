@@ -9,8 +9,7 @@
 	<link rel="stylesheet" href="themes/jqm-demos.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" /> 
 	<script src="scripts/jquery-1.11.1.min.js"></script> 
-	<script src="scripts/jquery.mobile-1.4.3.min.js"></script>
-	<script src="scripts/tripledes.js"></script>
+	<script src="scripts/jquery.mobile-1.4.3.min.js"></script>	
 	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 	<script type="text/javascript" charset="utf-8">
 	    document.addEventListener("deviceready", onDeviceReady, false);
@@ -42,8 +41,8 @@
 	    function onDeviceReady() {
 	        $("#menuPanel").panel("close");
 	        $("#logoPanel").fadeIn("fast", function () {
-	            var x1 = window.localStorage.getItem("uid");
-	            var y1 = window.localStorage.getItem("pwd");
+	            var x1 = window.localStorage.getItem(btoa("uid"));
+	            var y1 = window.localStorage.getItem(btoa("pwd"));
 	            if (x1 != null && y1 != null) {
 	                verifyLogin(x1, y1);
 	            }
