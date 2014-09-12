@@ -80,7 +80,7 @@
 		            return false;
 		        }
 		        else {
-		            verifyLogin(btoa(x), btoa(y));
+		            verifyLogin(x, y);
 		            return false;
 		        }
 		    }	  
@@ -116,7 +116,7 @@
         </div> 
         <div class="ui-grid-a" style="margin:100px 10px 10px 10px;">
             <div class="ui-block-a">
-                <a data-transition="flip" href="#courseIntro1" style="text-decoration: none">
+                <a data-transition="flow" href="#courseIntro1" style="text-decoration: none">
                     <div class="ui-body ui-body-a ui-corner-all" style="margin:5px;height:100px;background:rgb(64,49,82);"> 
                     <center>
                     <p style="color:White;font-">Hospitality Training</p>
@@ -125,7 +125,7 @@
                 </a>
             </div>
             <div class="ui-block-b">
-                <a data-transition="flip" href="#courseIntro1" style="text-decoration: none">             
+                <a data-transition="flow" href="#courseIntro1" style="text-decoration: none">             
                     <div class="ui-body ui-body-a ui-corner-all" style="margin:5px;height:100px;background:rgb(247,150,70);"> 
                     <center>
                     <p style="color:White;">Food Safety & Hygiene Training</p>
@@ -134,7 +134,7 @@
                 </a>
             </div>
                 <div class="ui-block-a">
-                    <a data-transition="flip" href="#courseIntro1" style="text-decoration: none">            
+                    <a data-transition="flow" href="#courseIntro1" style="text-decoration: none">            
                     <div class="ui-body ui-body-a ui-corner-all" style="margin:5px;height:100px;background:rgb(79,98,40);"> 
                     <center>
                     <p style="color:White;">Workplace Safety & Health Training</p>
@@ -143,7 +143,7 @@
                 </a>
             </div>
             <div class="ui-block-b">
-                <a data-transition="flip" href="#courseIntro1" style="text-decoration: none">           
+                <a data-transition="flow" href="#courseIntro1" style="text-decoration: none">           
                     <div  class="ui-body ui-body-a ui-corner-all" style="margin:5px;height:100px;background:rgb(128,0,0);"> 
                     <center>
                     <p style="color:White;" >Leadership & Management Training</p>
@@ -219,7 +219,7 @@
             </div>
         </div>
         <div class="ui-grid-solo">
-          <a data-transition="flip" href="#courseList1" style="text-decoration: none">            
+          <a data-transition="flow" href="#courseList1" style="text-decoration: none">            
             <div class="ui-body ui-body-a ui-corner-all" style="margin:20px;background:rgb(247,150,70);"> 
                 <center>
                 <p style="color:White;">View Courses</p>
@@ -291,8 +291,11 @@
 </div>
 
 <div data-role="panel" id="menuPanel" data-position="left" data-display="overlay" data-theme="a">
+    <div>
     <a  href="#demo-links" style="float:right;" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
-    <div style="margin:30px 15px 15px 15px;display:none;"  id="loginPanel" >             
+    </div>
+    <div style="clear:both;"></div>
+    <div style="margin:5px;display:none;"  id="loginPanel" >             
         <form name="myForm" onsubmit="return validateForm()">
         <ul data-role="listview" data-inset="true"> 
                 <li class="ui-field-contain">
@@ -314,12 +317,12 @@
         </form>
     </div>
     <br />
-    <div onclick="logout();" id="logoutButton" class="ui-body ui-body-a ui-corner-all" style="margin:15px;background:rgb(247,150,70);"> 
+    <div onclick="logout();" id="logoutButton" class="ui-body ui-body-a ui-corner-all" style="margin:15px;padding:5px;height:32px;background:rgb(247,150,70);"> 
         <center>
         <p style="color:White;">Sign-Out</p>
         </center>
     </div>
-    <div onclick="navigator.app.exitApp();" class="ui-body ui-body-a ui-corner-all" style="margin:15px;background:rgb(247,150,70);"> 
+    <div onclick="navigator.app.exitApp();" class="ui-body ui-body-a ui-corner-all" style="margin:15px;padding:5px;height:32px;background:rgb(247,150,70);"> 
         <center>
         <p style="color:White;">Exit</p>
         </center>
