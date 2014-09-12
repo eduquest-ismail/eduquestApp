@@ -31,16 +31,12 @@
 		        var x = window.localStorage.getItem("uid");
 		        var y = window.localStorage.getItem("pwd");
 		        if (x != null && y != null) {
-		            $("#logoutButton").fadeIn("fast", function () {
-		                $("#loginPanel").fadeOut("fast", function () {
-		                });
-		            });
+		            document.getElementById('logoutButton').style.display = "block";
+		            document.getElementById('loginPanel').style.display = "none";
 		        }
 		        else {
-		            $("#loginPanel").fadeIn("fast", function () {
-		                $("#logoutButton").fadeOut("fast", function () {
-		                });
-		            });
+		            document.getElementById('logoutButton').style.display = "none";
+		            document.getElementById('loginPanel').style.display = "block";
 		        }
             }
 		    function verifyLogin(x, y) {
