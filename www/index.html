@@ -18,30 +18,31 @@
 		    }, false);
 		    function logout() {
 		        window.localStorage.clear();
-		        onDeviceReady();
+		        initLogin();
 		    }
 		    function onDeviceReady() {
 		        $(function () {
 		            $("body>[data-role='panel']").panel();
 		        });
-		        $("#menuPanel").panel("close");
-		        $("#logoPanel").fadeIn("fast", function () {
-		            var x = window.localStorage.getItem("uid");
-		            var y = window.localStorage.getItem("pwd");
-		            if (x != null && y != null) {
-		                $("#logoutButton").fadeIn("fast", function () {
-		                    $("#loginPanel").fadeOut("fast", function () {
-		                    });
-		                });
-		            }
-		            else {
-		                $("#loginPanel").fadeIn("fast", function () {
-		                    $("#logoutButton").fadeOut("fast", function () {
-		                    });
-		                });
-		            }
-		        });
+		        initLogin();        
 		    }
+		    function initLogin() {
+		        $("#menuPanel").panel("close");
+		        var x = window.localStorage.getItem("uid");
+		        var y = window.localStorage.getItem("pwd");
+		        if (x != null && y != null) {
+		            $("#logoutButton").fadeIn("fast", function () {
+		                $("#loginPanel").fadeOut("fast", function () {
+		                });
+		            });
+		        }
+		        else {
+		            $("#loginPanel").fadeIn("fast", function () {
+		                $("#logoutButton").fadeOut("fast", function () {
+		                });
+		            });
+		        }
+            }
 		    function verifyLogin(x, y) {
 		        var xmlhttp;
 		        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -55,18 +56,12 @@
 		                if (xmlhttp.responseText == "true") {
 		                    window.localStorage.setItem("uid", x);
 		                    window.localStorage.setItem("pwd", y);
-		                    $("#logoutButton").fadeIn("fast", function () {
-		                        $("#loginPanel").fadeOut("fast", function () {
-		                        });
-		                    });
+		                    initLogin();
 		                }
 		                else {
 		                    alert("Invalid Username or Password");
 		                    window.localStorage.clear();
-		                    $("#loginPanel").fadeIn("fast", function () {
-		                        $("#logoutButton").fadeOut("fast", function () {
-		                        });
-		                    });
+		                    initLogin();
 		                }
 		            }
 		        }
