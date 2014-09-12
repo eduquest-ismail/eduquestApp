@@ -13,6 +13,8 @@
     </author>
     <gap:platform name="android" />
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="BackgroundColor" value="0xfff7f7f7"/>
     <content src="index.html" />
     <access origin="*" />
 </widget>
