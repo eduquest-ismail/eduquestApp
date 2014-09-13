@@ -428,7 +428,8 @@
       </center>        
     <div data-role="content" style="margin:2px;padding:2px;"> 
     <div>
-    <a  href="#homePage" style="float:right;" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
+        <button onclick="navigator.app.exitApp();"  style="float:right;"  class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Exit</button>
+        <a  href="#homePage" style="float:right;"  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
     </div>
     <div style="clear:both;"></div>
     <div style="margin:5px;display:none;"  id="loginPanel" >             
@@ -453,19 +454,8 @@
         </form>
     </div>
     <br />
-    <div onclick="logout();" id="logoutButton" class="ui-body ui-body-a ui-corner-all" style="margin:15px;padding:5px;height:32px;background:rgb(247,150,70);"> 
-        <center>
-        <p style="color:White;">Sign-Out</p>
-        </center>
-    </div>
-    <div onclick="navigator.app.exitApp();" class="ui-body ui-body-a ui-corner-all" style="margin:15px;padding:5px;height:32px;background:rgb(247,150,70);"> 
-        <center>
-        <p style="color:White;">Exit</p>
-        </center>
-    </div> 
-       
-    </div>
-    
+    <button onclick="logout();" id="logoutButton" class="ui-body ui-body-a ui-corner-all">Sign-Out</button>
+    </div>    
 </div>
 
 </body>
