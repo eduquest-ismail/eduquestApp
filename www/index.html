@@ -26,7 +26,14 @@
 	        });
 	        var x = window.localStorage.getItem("uid");
 	        var y = window.localStorage.getItem("pwd");
-	        verifyLogin(x, y);
+	        if (x != null && y != null) {
+	            verifyLogin(x, y);
+	        }
+	        else
+	        {
+		    document.getElementById('logoutButton').style.display = "none";
+	            document.getElementById('loginPanel').style.display = "block";
+	        }
 	    }
 	    function initLogin() {
 	        var x = window.localStorage.getItem("uid");
