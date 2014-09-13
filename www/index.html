@@ -48,7 +48,7 @@
 	        }
 	        xmlhttp.onreadystatechange = function () {
 	            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-	                if (xmlhttp.responseText == "true") {
+                    if (xmlhttp.responseText == "true") {
 	                    window.localStorage.setItem("uid", x);
 	                    window.localStorage.setItem("pwd", y);
 	                    initLogin();
