@@ -24,7 +24,9 @@
 	        $(function () {
 	            $("body>[data-role='panel']").panel().enhanceWithin();
 	        });
-	        initLogin();
+	        var x = window.localStorage.getItem("uid");
+	        var y = window.localStorage.getItem("pwd");
+	        verifyLogin(x, y);
 	    }
 	    function initLogin() {
 	        var x = window.localStorage.getItem("uid");
@@ -60,7 +62,7 @@
 	                }
 	            }
 	        }
-	        xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?dname=" + device.name + "&uuid=" + device.uuid + "&u=" + x + "&p=" + y, true);
+	        xmlhttp.open("POST", "http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x + "&p=" + y, true);
 	        xmlhttp.send();
 	    }
 	    function validateForm() {
