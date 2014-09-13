@@ -73,8 +73,8 @@
 	        xmlhttp.send();
 	    }
 	    function validateForm() {
-	        var x = document.forms["myForm"]["UID"].value;
-	        var y = document.forms["myForm"]["PWD"].value;
+	        var x = btoa(document.forms["myForm"]["UID"].value);
+	        var y = btoa(document.forms["myForm"]["PWD"].value);
 	        if (x == null || x == "") {
 	            alert("Username cannot Blank");
 	            return false;
