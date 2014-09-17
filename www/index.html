@@ -20,7 +20,7 @@
 	        window.localStorage.clear();
 	        initLogin();
 	    }
-	    function onDeviceReady() {
+	    function onDeviceReady() {	       
 	        var x = window.localStorage.getItem("uid");
 	        var y = window.localStorage.getItem("pwd");
 	        if (x != null && y != null) {
@@ -75,19 +75,40 @@
 	    }
 
 	    $(document).on("pagebeforeshow", "#courseList1", function () {
-	        var output = "";
-	        $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=1', function (data) {
-                for (i in data) {
-                    if (data[i].isDivider == true) {
-                        output += '<li data-role="list-divider">' + data[i].nodeTxt + '</li>';
-                    }
-                    else {
-                        output += '<li><a data-transition="none" href="' + data[i].URL + '" data-ajax="false">' + data[i].nodeTxt + '</a></li>';
-                    }
+	        navigator.network.isReachable("http://m.eduquest.com.sg/getCourses.ashx", function (reachability) {
+	            if (NetworkStatus.NOT_REACHABLE == reachability.code || reachability) {
+                    /*var db = window.openDatabase("iszaDB", "1.0", "ISZA Database", 1000000);
+	                db.transaction(function (tx) {
+	                        tx.executeSql('select isdivider,nodetxt,url from topics where part=1', [], function (tx, results) {
+	                            var len = results.rows.length;
+	                            for (var i = 0; i < len; i++) {
+	                                if (results.rows.item(i).isdivider == true) {
+	                                    output += '<li data-role="list-divider">' + results.rows.item(i).nodetxt + '</li>';
+	                                }
+	                                else {
+	                                    output += '<li><a data-transition="none" href="' + results.rows.item(i).url + '" data-ajax="false">' + results.rows.item(i).nodetxt + '</a></li>';
+	                                }
+	                            }
+	                            $('#lv1').html(output).listview("refresh");
+	                        }, alert("Error!"));
+	                    }, alert("Error!")); */
+                        alert("No Internet!");
+	            }
+	            else { 
+                    var output = "";
+	                $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=1', function (data) {
+	                    for (i in data) {
+	                        if (data[i].isDivider == true) {
+	                            output += '<li data-role="list-divider">' + data[i].nodeTxt + '</li>';
+	                        }
+	                        else {
+	                            output += '<li><a data-transition="none" href="' + data[i].URL + '" data-ajax="false">' + data[i].nodeTxt + '</a></li>';
+	                        }
+	                    }
+	                    $('#lv1').html(output).listview("refresh");
+	                });
                 }
-	            $('#lv1').html(output).listview("refresh");
-	        });
-	    });
+	        }, {});
 
 	    $(document).on("pagebeforeshow", "#courseList3", function () {
 	        var output = "";
