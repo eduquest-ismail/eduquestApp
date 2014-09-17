@@ -44,7 +44,7 @@
 	        }
 	    }
 	    function verifyLogin(x, y) {
-	        $.getJSON("http://m.eduquest.com.sg/verifyLogin.aspx?u=" + x + "&p=" + y, function (data) {
+	        $.getJSON("http://m.eduquest.com.sg/login.ashx?u=" + x + "&p=" + y, function (data) {
 	            if (data == "true") {
 	                window.localStorage.setItem("uid", x);
 	                window.localStorage.setItem("pwd", y);
