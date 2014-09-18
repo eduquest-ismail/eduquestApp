@@ -152,6 +152,10 @@
         var iid = '';
 
         $(document).on("pagebeforeshow", "#courseList1", function () {
+            $('#lv1').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+        });
+
+        $(document).on("pageshow", "#courseList1", function () {
             var output = "";
             $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=1', function (data) {
                 for (i in data) {
@@ -166,7 +170,11 @@
             });
         });
 
-	    $(document).on("pagebeforeshow", "#courseList3", function () {
+        $(document).on("pagebeforeshow", "#courseList3", function () {
+            $('#lv3').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+        });
+
+	    $(document).on("pageshow", "#courseList3", function () {
 	        var output = "";
 	        $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=3', function (data) {
 	            for (i in data) {
@@ -182,6 +190,10 @@
 	    });
 
 	    $(document).on("pagebeforeshow", "#courseList4", function () {
+	        $('#lv4').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+	    });
+
+	    $(document).on("pageshow", "#courseList4", function () {
 
 	        var output = "";
 	        $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=4', function (data) {
@@ -214,6 +226,10 @@
 	    });
 
 	    $(document).on("pagebeforeshow", "#intakePage", function () {
+	        $('#ilv').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+	    });
+
+	    $(document).on("pageshow", "#intakePage", function () {
 
 	        var output = "<li data-role='list-divider'>Course Schedules</li>";
 	        $.getJSON('http://m.eduquest.com.sg/getIntakes.ashx?pid=' + pid, function (data) {
@@ -321,12 +337,7 @@
         <center>
             <div class="ui-icon-course1" style="width:259px;height:120px;border: 5px solid; border-radius: 15px; border-color:White;"></div>
         </center>     
-        <ul  id="lv1" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;"> 
-            <li style="background:transparent;">
-                <center>
-                    <div class="ui-icon-load" style="width:32px;height:32px;"></div>
-                </center>
-            </li>
+        <ul  id="lv1" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">             
         </ul>
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
@@ -380,11 +391,7 @@
             <div class="ui-icon-course3" style="width:259px;height:120px;border: 5px solid; border-radius: 15px; border-color:White;"></div>
         </center>     
         <ul  id="lv3" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">  
-            <li style="background:transparent;">
-                <center>
-                    <div class="ui-icon-load" style="width:32px;height:32px;"></div>
-                </center>
-            </li>
+           
         </ul>
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
@@ -409,11 +416,7 @@
             <div class="ui-icon-course4" style="width:259px;height:120px;border: 5px solid; border-radius: 15px; border-color:White;"></div>    
         </center>         
          <ul  id="lv4" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">   
-             <li style="background:transparent;">
-                <center>
-                    <div class="ui-icon-load" style="width:32px;height:32px;"></div>
-                </center>
-            </li>
+           
         </ul>
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
@@ -435,9 +438,7 @@
     </center>        
     <div data-role="content" style="margin:2px;padding:2px;">          
         <div id="courseDetail" style="margin:24px 5px 5px 5px;" class="jqm-block-content">  
-            <center>
-                    <div class="ui-icon-load" style="width:32px;height:32px;"></div>
-            </center>
+           
         </div>
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
@@ -459,11 +460,7 @@
     </center>        
     <div data-role="content" style="margin:2px;padding:2px;">          
          <ul  id="ilv" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;"> 
-            <li style="background:transparent;">
-                <center>
-                    <div class="ui-icon-load" style="width:32px;height:32px;"></div>
-                </center>
-            </li>
+            
         </ul>
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
