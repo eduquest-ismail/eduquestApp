@@ -270,11 +270,12 @@
 	        else {
 	            var output = "";
 	            $.getJSON('http://m.eduquest.com.sg/setGroupRegister.ashx?scnt=' + scnt + '&intakeid=' + iid, function (data) {
-	                if (data[0].isSuccess == true) {
+	                if (data.isSuccess == true) {
+	                    alert('success');	           
 	                    output = '<div class="jqm-block-content"><center><h3>Your online form has been submitted to our admin office successfully.</h3><p>Our team will contact you shortly to confirm and finalise your course registration.</p><p>Thank you for choosing Eduquest International Institute as your preferred training provider.</p><a href="#homePage" class="ui-btn ui-corner-all ui-btn-a" >HOME</a></center></div>';
 	                }
-	                else {
-                        output = '<div class="jqm-block-content"><center><h3>Not Registered</h3><p>'+data[0].errorTxt+'</p><a href="#homePage" class="ui-btn ui-corner-all ui-btn-a" >HOME</a></center></div>';
+	                else {                            
+	                    output = '<div class="jqm-block-content"><center><h3>Not Registered</h3><p>' + data.errorTxt + '</p><a href="#homePage" class="ui-btn ui-corner-all ui-btn-a" >HOME</a></center></div>';
 	                }
 	                $('#gregisterDetail').html(output);
 	            });
