@@ -96,22 +96,23 @@
 	        var x = window.localStorage.getItem("uid");
 	        var y = window.localStorage.getItem("pwd");
 	        if (x != null && y != null) {
+	            $('#uName').html('Logged as: ' + window.localStorage.getItem("uname"));
 	            document.getElementById('logoutButton').style.display = "block";
 	            document.getElementById('loginPanel').style.display = "none";
 	        }
 	        else {
+	            $('#uName').html('');
 	            document.getElementById('logoutButton').style.display = "none";
 	            document.getElementById('loginPanel').style.display = "block";
 	        }
 	    }
 	    function verifyLogin(x, y) {
-	        $.getJSON("http://m.eduquest.com.sg/login.ashx?u=" + x + "&p=" + y, function (data) {
-	            alert(data);
-	            alert(data.d);
-	            if (data != "") {
+	        $.getJSON("login.ashx?u=" + x + "&p=" + y, function (data) {
+	           if (data.isApproved == true) {
 	                window.localStorage.setItem("uid", x);
 	                window.localStorage.setItem("pwd", y);
-	                window.localStorage.setItem("role", data);
+	                window.localStorage.setItem("role", data.Role);
+	                window.localStorage.setItem("uname", data.Name);
 	                initLogin();
 	            }
 	            else {
@@ -240,7 +241,7 @@
     
   </head>
 
-<body>
+<body onload="onDeviceReady">
 
 <div id="homePage" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a"> 
     <center>
@@ -478,6 +479,7 @@
         </form>
     </div>
     <br />
+    <p id="uName" style="font-size:x-small;"></p> 
     <button onclick="logout();" id="logoutButton" class="ui-body ui-body-a ui-corner-all">Sign-Out</button>
     </div>    
 </div>
