@@ -11,6 +11,9 @@
     <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
         Mohamed Ismail
     </author>
+    <gap:config-file platform="android" parent="/manifest">
+      <application android:hardwareAccelerated="false" />
+    </gap:config-file>
     <gap:platform name="android" />
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
     <preference name="Fullscreen" value="true" />
