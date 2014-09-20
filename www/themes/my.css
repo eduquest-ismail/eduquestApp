@@ -1,5 +1,6 @@
 .bg
 {
+    -webkit-backface-visibility: hidden;
     background: #f7f7f7; /* Old browsers */
     background: -moz-linear-gradient(top,  #f7f7f7 1%, #f9c667 71%, #f79621 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f7f7f7), color-stop(71%,#f9c667), color-stop(100%,#f79621)); /* Chrome,Safari4+ */
