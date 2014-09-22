@@ -1,1 +1,185 @@
-eval(function (p, a, c, k, e, d) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) { d[e(c)] = k[c] || e(c) } k = [function (e) { return d[e] } ]; e = function () { return '\\w+' }; c = 1 }; while (c--) { if (k[c]) { p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]) } } return p } ('9 17=\'\';9 11=\'\';9 1p=\'\';7 13(1D){17=1D}7 1E(1C){11=1C}7 1U(1A){1p=1A}b.1z("2c",1q,l);b.1z("2b",7(){$.1y.28(\'#1V\')},l);7 29(){h.j.1S();10()}7 1q(){$.1y.2a=D;9 x=h.j.L("1j");9 y=h.j.L("1n");g(x!=G&&y!=G){1g(x,y)}k{b.I(\'1o\').c.J="n";b.I(\'1k\').c.J="R"}}7 10(){9 x=h.j.L("1j");9 y=h.j.L("1n");g(x!=G&&y!=G){$(\'#1L\').f(\'2e 1u: \'+h.j.L("1Q"));b.I(\'1o\').c.J="R";b.I(\'1k\').c.J="n"}k{$(\'#1L\').f(\'\');b.I(\'1o\').c.J="n";b.I(\'1k\').c.J="R"}}7 1g(x,y){$.H("E://m.w.B.F/22.A?u="+x+"&p="+y,7(2){g(2.1Z==D){h.j.16("1j",x);h.j.16("1n",y);h.j.16("K",2.2d);h.j.16("1Q",2.20);10()}k{1i("1Y 1M 1X 1H");h.j.1S();10()}})}7 21(){9 x=1x(b.1e["1P"]["23"].1f);9 y=1x(b.1e["1P"]["2f"].1f);g(x==G||x==""){1i("1M 1G 1R");S l}k g(y==G||y==""){1i("1H 1G 1R");S l}k{1g(x,y);S l}}$(b).Q("X","#26",7(){9 6="";$(\'#1O\').f(\'<5 c="12:15;"><d><e o="8-r-T" c="W:q;V:q;"></e></d></5>\').t("v");$.H(\'E://m.w.B.F/1c.A?1h=1\',7(2){M(i Y 2){g(2[i].1b==D){6+=\'<5 2-K="18-14">\'+2[i].C+\'</5>\'}k{6+=\'<5><a 2-z="n" s="#19" U="13(\'+2[i].Z+\')" 2-1a="l">\'+2[i].C+\'</a></5>\'}}$(\'#1O\').f(6).t("v")})});$(b).Q("X","#27",7(){9 6="";$(\'#1v\').f(\'<5 c="12:15;"><d><e o="8-r-T" c="W:q;V:q;"></e></d></5>\').t("v");$.H(\'E://m.w.B.F/1c.A?1h=3\',7(2){M(i Y 2){g(2[i].1b==D){6+=\'<5 2-K="18-14">\'+2[i].C+\'</5>\'}k{6+=\'<5><a 2-z="n" s="#19" U="13(\'+2[i].Z+\')" 2-1a="l">\'+2[i].C+\'</a></5>\'}}$(\'#1v\').f(6).t("v")})});$(b).Q("X","#25",7(){9 6="";$(\'#1B\').f(\'<5 c="12:15;"><d><e o="8-r-T" c="W:q;V:q;"></e></d></5>\').t("v");$.H(\'E://m.w.B.F/1c.A?1h=4\',7(2){M(i Y 2){g(2[i].1b==D){6+=\'<5 2-K="18-14">\'+2[i].C+\'</5>\'}k{6+=\'<5><a 2-z="n" s="#19" U="13(\'+2[i].Z+\')" 2-1a="l">\'+2[i].C+\'</a></5>\'}}$(\'#1B\').f(6).t("v")})});$(b).Q("X","#19",7(){9 6="";$(\'#1I\').f(\'<d><e o="8-r-T" c="W:q;V:q;"></e></d>\');$.H(\'E://m.w.B.F/24.A?17=\'+17,7(2){6+=\'<a s="#1K" U="1E(\\\'\'+2[0].Z+\'\\\')" 2-z="n" o="8-N 8-1l-1m 8-r-2q 8-2S-r 8-2T-r  8-N-r-2U">2V</a><p>\'+2[0].C+\'</p>\';M(i Y 2){6+=\'<P>\'+2[i].2R+\'</P><p>\'+2[i].2Q+\'</p>\'}$(\'#1I\').f(6)})});$(b).Q("X","#1K",7(){9 6="<5 2-K=\'18-14\'>2M 2L</5>";$(\'#1T\').f(\'<5 c="12:15;"><d><e o="8-r-T" c="W:q;V:q;"></e></d></5>\').t("v");$.H(\'E://m.w.B.F/2N.A?11=\'+11,7(2){M(i Y 2){g(2[i].2O==D){g(h.j.L("K")=="2g"){6+=\'<5><a s="#2X" U="1U(\\\'\'+2[i].2W+\'\\\')"  2-z="n"><1N>\'+2[i].1d+\'</1N></a></5>\'}k{6+=\'<5><a 2-z="n" s="#1V">\'+2[i].1d+\'</a></5>\'}}k{6+=\'<5><a 2-z="n" s="#">\'+2[i].1d+\'</a></5>\'}}$(\'#1T\').f(6).t("v")})});7 2Y(){9 O=b.1e["2Z"]["O"].1f;g(O==G||O==""){S l}k{9 6="";$.H(\'E://m.w.B.F/34.A?O=\'+O+\'&30=\'+1p,7(2){g(2.31==D){6=\'<e o="1r-R-1s"><d><P>32 33 2P 2J 2K 2p 1W 2r 2s 2t 2o.</P><p>2n 2i 2h 2j 1w 2k 1W 2m 2l 2u 1t 2v 2F.</p><p>2E 1w M 2G 2H 2I 2D 1u 1t 2C 2x 2w.</p><a s="#1J" o="8-N 8-1l-1m 8-N-a" >1F</a></d></e>\'}k{6=\'<e o="1r-R-1s"><d><P>2y 2z</P><p>\'+2.2B+\'</p><a s="#1J" o="8-N 8-1l-1m 8-N-a" >1F</a></d></e>\'}$(\'#2A\').f(6)});S l}}', 62, 191, '||data|||li|output|function|ui|var||document|style|center|div|html|if|window||localStorage|else|false||none|class||32px|icon|href|listview||refresh|eduquest|||transition|ashx|com|nodeTxt|true|http|sg|null|getJSON|getElementById|display|role|getItem|for|btn|scnt|h3|on|block|return|load|onclick|height|width|pagebeforeshow|in|URL|initLogin|pid|background|setCourse|divider|transparent|setItem|cid|list|coursePage|ajax|isDivider|getCourses|Details|forms|value|verifyLogin|part|alert|uid|loginPanel|corner|all|pwd|logoutButton|iid|onDeviceReady|jqm|content|your|as|lv3|you|btoa|mobile|addEventListener|_iid|lv4|_pid|_cid|setProgramme|HOME|cannot|Password|courseDetail|homePage|intakePage|uName|Username|h2|lv1|myForm|uname|Blank|clear|ilv|setIntake|loginPage|to|or|Invalid|isApproved|Name|validateForm|login|UID|getCourseDetails|courseList4|courseList1|courseList3|changePage|logout|touchOverflowEnabled|menubutton|deviceready|Role|Logged|PWD|Company|will|team|contact|shortly|and|confirm|Our|successfully|submitted|check|our|admin|office|finalise|course|provider|training|Not|Registered|gregisterDetail|errorTxt|preferred|Institute|Thank|registration|choosing|Eduquest|International|has|been|Schedules|Course|getIntakes|canRegister|form|Content|Header|nodisc|alt|left|REGISTER|ID|gregisterPage|validateGregister|gregisterForm|intakeid|isSuccess|Your|online|setGroupRegister'.split('|'), 0, {}))
+var cid = '';
+var pid = '';
+var iid = '';
+function setCourse(_cid) {
+    cid = _cid;
+}
+function setProgramme(_pid) {
+    pid = _pid;
+}
+function setIntake(_iid) {
+    iid = _iid;
+}
+document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("menubutton", function () {
+    $.mobile.changePage('#loginPage')
+}, false);
+function logout() {
+    window.localStorage.clear();
+    initLogin();
+}
+function onDeviceReady() {
+    navigator.splashscreen.show();
+    $.mobile.touchOverflowEnabled = true;
+    var x = window.localStorage.getItem("uid");
+    var y = window.localStorage.getItem("pwd");
+    if (x != null && y != null) {
+        verifyLogin(x, y);
+    }
+    else {
+        document.getElementById('logoutButton').style.display = "none";
+        document.getElementById('loginPanel').style.display = "block";
+    }
+    navigator.splashscreen.hide();
+}
+function initLogin() {
+    var x = window.localStorage.getItem("uid");
+    var y = window.localStorage.getItem("pwd");
+    if (x != null && y != null) {
+        $('#uName').html('Logged as: ' + window.localStorage.getItem("uname"));
+        document.getElementById('logoutButton').style.display = "block";
+        document.getElementById('loginPanel').style.display = "none";
+    }
+    else {
+        $('#uName').html('');
+        document.getElementById('logoutButton').style.display = "none";
+        document.getElementById('loginPanel').style.display = "block";
+    }
+    navigator.splashscreen.hide();
+}
+function verifyLogin(x, y) {
+    $.getJSON("http://m.eduquest.com.sg/login.ashx?u=" + x + "&p=" + y, function (data) {
+        if (data.isApproved == true) {
+            window.localStorage.setItem("uid", x);
+            window.localStorage.setItem("pwd", y);
+            window.localStorage.setItem("role", data.Role);
+            window.localStorage.setItem("uname", data.Name);
+            initLogin();
+        }
+        else {
+            alert("Invalid Username or Password");
+            window.localStorage.clear();
+            initLogin();
+        }
+    });
+}
+function validateForm() {
+    var x = btoa(document.forms["myForm"]["UID"].value);
+    var y = btoa(document.forms["myForm"]["PWD"].value);
+    if (x == null || x == "") {
+        alert("Username cannot Blank");
+        return false;
+    }
+    else if (y == null || y == "") {
+        alert("Password cannot Blank");
+        return false;
+    }
+    else {
+        verifyLogin(x, y);
+        return false;
+    }
+}
+
+
+$(document).on("pagebeforeshow", "#courseList1", function () {
+    var output = "";
+    $('#lv1').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+    $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=1', function (data) {
+        for (i in data) {
+            if (data[i].isDivider == true) {
+                output += '<li data-role="list-divider">' + data[i].nodeTxt + '</li>';
+            }
+            else {
+                output += '<li><a data-transition="none" href="#coursePage" onclick="setCourse(' + data[i].URL + ')" data-ajax="false">' + data[i].nodeTxt + '</a></li>';
+            }
+        }
+        $('#lv1').html(output).listview("refresh");
+    });
+});
+
+$(document).on("pagebeforeshow", "#courseList3", function () {
+    var output = "";
+    $('#lv3').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+    $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=3', function (data) {
+        for (i in data) {
+            if (data[i].isDivider == true) {
+                output += '<li data-role="list-divider">' + data[i].nodeTxt + '</li>';
+            }
+            else {
+                output += '<li><a data-transition="none" href="#coursePage" onclick="setCourse(' + data[i].URL + ')" data-ajax="false">' + data[i].nodeTxt + '</a></li>';
+            }
+        }
+        $('#lv3').html(output).listview("refresh");
+    });
+});
+
+
+$(document).on("pagebeforeshow", "#courseList4", function () {
+    var output = "";
+    $('#lv4').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+    $.getJSON('http://m.eduquest.com.sg/getCourses.ashx?part=4', function (data) {
+        for (i in data) {
+            if (data[i].isDivider == true) {
+                output += '<li data-role="list-divider">' + data[i].nodeTxt + '</li>';
+            }
+            else {
+                output += '<li><a data-transition="none" href="#coursePage" onclick="setCourse(' + data[i].URL + ')" data-ajax="false">' + data[i].nodeTxt + '</a></li>';
+            }
+        }
+        $('#lv4').html(output).listview("refresh");
+    });
+});
+
+
+$(document).on("pagebeforeshow", "#coursePage", function () {
+    var output = "";
+    $('#courseDetail').html('<center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center>');
+    $.getJSON('http://m.eduquest.com.sg/getCourseDetails.ashx?cid=' + cid, function (data) {
+        output += '<a href="#intakePage" onclick="setProgramme(\'' + data[0].URL + '\')" data-transition="none" class="ui-btn ui-corner-all ui-icon-check ui-nodisc-icon ui-alt-icon  ui-btn-icon-left">REGISTER</a><p>' + data[0].nodeTxt + '</p>';
+        for (i in data) {
+            output += '<h3>' + data[i].Header + '</h3><p>' + data[i].Content + '</p>';
+        }
+        $('#courseDetail').html(output);
+    });
+});
+
+$(document).on("pagebeforeshow", "#intakePage", function () {
+    var output = "<li data-role='list-divider'>Course Schedules</li>";
+    $('#ilv').html('<li style="background:transparent;"><center><div class="ui-icon-load" style="width:32px;height:32px;"></div></center></li>').listview("refresh");
+    $.getJSON('http://m.eduquest.com.sg/getIntakes.ashx?pid=' + pid, function (data) {
+        for (i in data) {
+            if (data[i].canRegister == true) {
+                if (window.localStorage.getItem("role") == "Company") {
+                    output += '<li><a href="#gregisterPage" onclick="setIntake(\'' + data[i].ID + '\')"  data-transition="none"><h2>' + data[i].Details + '</h2></a></li>';
+                }
+                else {
+                    output += '<li><a data-transition="none" href="#loginPage">' + data[i].Details + '</a></li>';
+                }
+            }
+            else {
+                output += '<li><a data-transition="none" href="#">' + data[i].Details + '</a></li>';
+            }
+        }
+        $('#ilv').html(output).listview("refresh");
+    });
+});
+
+function validateGregister() {
+    var scnt = document.forms["gregisterForm"]["scnt"].value;
+    if (scnt == null || scnt == "") {
+        return false;
+    }
+    else {
+        var output = "";
+        $.getJSON('http://m.eduquest.com.sg/setGroupRegister.ashx?scnt=' + scnt + '&intakeid=' + iid, function (data) {
+            if (data.isSuccess == true) {
+                output = '<div class="jqm-block-content"><center><h3>Your online form has been submitted to our admin office successfully.</h3><p>Our team will contact you shortly to confirm and finalise your course registration.</p><p>Thank you for choosing Eduquest International Institute as your preferred training provider.</p><a href="#homePage" class="ui-btn ui-corner-all ui-btn-a" >HOME</a></center></div>';
+            }
+            else {
+                output = '<div class="jqm-block-content"><center><h3>Not Registered</h3><p>' + data.errorTxt + '</p><a href="#homePage" class="ui-btn ui-corner-all ui-btn-a" >HOME</a></center></div>';
+            }
+            $('#gregisterDetail').html(output);
+        });
+        return false;
+    }
+}

@@ -14,7 +14,6 @@
   <gap:platform name="android" />
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
   <preference name="AutoHideSplashScreen" value="false" />
-  <preference name="SplashScreenDelay" value="3000" />
   <gap:splash src="images/320x470_72.png" />
   <content src="index.html" />
   <access origin="*" />
