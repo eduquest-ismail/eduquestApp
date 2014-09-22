@@ -19,7 +19,6 @@ function logout() {
     initLogin();
 }
 function onDeviceReady() {
-    navigator.splashscreen.show();
     $.mobile.touchOverflowEnabled = true;
     var x = window.localStorage.getItem("uid");
     var y = window.localStorage.getItem("pwd");
@@ -30,7 +29,6 @@ function onDeviceReady() {
         document.getElementById('logoutButton').style.display = "none";
         document.getElementById('loginPanel').style.display = "block";
     }
-    navigator.splashscreen.hide();
 }
 function initLogin() {
     var x = window.localStorage.getItem("uid");
@@ -45,7 +43,6 @@ function initLogin() {
         document.getElementById('logoutButton').style.display = "none";
         document.getElementById('loginPanel').style.display = "block";
     }
-    navigator.splashscreen.hide();
 }
 function verifyLogin(x, y) {
     $.getJSON("http://m.eduquest.com.sg/login.ashx?u=" + x + "&p=" + y, function (data) {

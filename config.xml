@@ -12,8 +12,9 @@
     Mohamed Ismail
   </author>
   <gap:platform name="android" />
-  <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
+  <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
   <preference name="AutoHideSplashScreen" value="false" />
+  <preference name="splash-screen-duration" value="6000" />
   <gap:splash src="images/320x470_72.png" />
   <content src="index.html" />
   <access origin="*" />
