@@ -12,14 +12,10 @@
     Mohamed Ismail
   </author>
   <gap:platform name="android" />
-  <gap:plugin name = "org.apache.cordova.splashscreen" />
+  <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
   <preference name="AutoHideSplashScreen" value="false" />
   <preference name="SplashScreenDelay" value="3000" />
-  <preference name="permissions" value="none"/>
-  <feature name="http://api.phonegap.com/1.0/network"/>
   <gap:splash src="images/320x470_72.png" />
-  <preference name="Fullscreen" value="true" />
-  <preference name="BackgroundColor" value="0xfff7f7f7"/>
   <content src="index.html" />
   <access origin="*" />
 </widget>
