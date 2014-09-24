@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
 	<meta charset="utf-8">
@@ -16,8 +16,7 @@
     <script type="text/javascript" charset="utf-8" src="scripts/my.js"></script>
   </head>
 <body>
-<div id="splashScreen" data-role="page" style="background-color:White;" >     
-    <img id="splashContent" src="images/Splash.png" style="width:100%;margin:20px 0 0 0" />
+<div id="splashScreen" data-role="page" class="bg-splash"> 
 </div>
 <div id="homePage" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a"> 
     <center>
@@ -25,9 +24,9 @@
     </center>        
     <div data-role="content" style="margin:2px;padding:2px;">     
          <a data-transition="none"  href="#courseList1" style="text-decoration: none;">                   
-             <div class="ui-grid-b  ui-icon-course1  ui-corner-all" style="height:115px;margin:2px;border: 3px solid; border-radius: 10px; border-color:White;">
+             <div class="ui-grid-b  ui-icon-course1  ui-corner-all" style="height:115px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(64,49,82);">
                 <div class="ui-block-a">
-                     <div class="ui-body ui-body-a ui-corner-all" style="margin:0px;height:102px;background:rgb(64,49,82);border:0px;"> 
+                     <div class="ui-body ui-body-a ui-corner-all" style="padding:2px;margin:0px;height:112px;background:rgb(64,49,82);border:0px;"> 
                         <center>
                         <p style="color:White;">Hospitality Training</p>
                         </center>
@@ -37,11 +36,11 @@
          </a>
 
         <a data-transition="none" href="#courseList2" style="text-decoration: none;">              
-        <div class="ui-grid-b  ui-icon-course2  ui-corner-all" style="height:115px;margin:2px;border: 3px solid; border-radius: 10px; border-color:White;">
+        <div class="ui-grid-b  ui-icon-course2  ui-corner-all" style="height:115px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(247,150,70);">
         <div class="ui-block-a"></div>
         <div class="ui-block-b"></div>
             <div class="ui-block-c">
-                    <div class="ui-body ui-body-a ui-corner-all" style="margin:0px;height:102px;background:rgb(247,150,70);border:0px;"> 
+                    <div class="ui-body ui-body-a ui-corner-all" style="padding:2px;margin:0px;height:112px;background:rgb(247,150,70);border:0px;"> 
                     <center>
                         <p style="color:White;">Food Safety & Hygiene Training</p>
                     </center>
@@ -51,9 +50,9 @@
          </a>
 
         <a data-transition="none"  href="#courseList3" style="text-decoration: none;">
-        <div class="ui-grid-b  ui-icon-course3  ui-corner-all" style="height:115px;margin:2px;border: 3px solid; border-radius: 10px; border-color:White;">
+        <div class="ui-grid-b  ui-icon-course3  ui-corner-all" style="height:115px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(79,98,40);">
             <div class="ui-block-a">
-                   <div class="ui-body ui-body-a ui-corner-all" style="margin:0px;height:102px;background:rgb(79,98,40);border:0px;"> 
+                   <div class="ui-body ui-body-a ui-corner-all" style="padding:2px;margin:0px;height:112px;background:rgb(79,98,40);border:0px;"> 
                     <center>
                         <p style="color:White;">Workplace Safety & Health Training</p>
                       </center>
@@ -63,11 +62,11 @@
          </a>
 
         <a data-transition="none"  href="#courseList4" style="text-decoration: none;">           
-        <div class="ui-grid-b  ui-icon-course4  ui-corner-all" style="height:115px;margin:2px;border: 3px solid; border-radius: 10px; border-color:White;">
+        <div class="ui-grid-b  ui-icon-course4  ui-corner-all" style="height:115px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(128,0,0);">
             <div class="ui-block-a"></div>
             <div class="ui-block-b"></div>       
             <div class="ui-block-c">
-                    <div class="ui-body ui-body-a ui-corner-all" style="margin:0px;height:102px;background:rgb(128,0,0);border:0px;"> 
+                    <div class="ui-body ui-body-a ui-corner-all" style="padding:2px;margin:0px;height:112px;background:rgb(128,0,0);border:0px;"> 
                     <center>
                       <p style="color:White;" >Leadership & Management Training</p>
                     </center>
@@ -81,7 +80,7 @@
 </div>
 
 
-<div id="courseList1" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
+<div id="courseList1" data-role="page" class="bg-fnb jqm-demos jqm-home ui-page-theme-a">
     <div data-role="header" style="background:transparent;border:0px;">	
          <center>
             <IMG style=" width:125px;margin:10px 0px 0px 0px;" src="images/eduquest.png">     
@@ -89,11 +88,10 @@
     </div>     
     <div data-role="content" style="margin:2px;padding:2px;">   
         <center>
-            <div class="ui-icon-course1" style="width:259px;height:120px;border: 3px solid; border-radius: 10px; border-color:White;"></div>    
-        </center>         
-         <ul  id="lv1" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">   
-           
-        </ul>
+            <div class="ui-icon-course1" style="width:259px;height:120px;border: 2px solid; border-radius: 10px; border-color:rgb(64,49,82);"></div>    
+        </center>      
+        <div id="lv1">
+        </div>        
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
        <div data-role="navbar" style="padding:5px;"> 
@@ -108,7 +106,7 @@
     </div><!-- /footer -->   
 </div>
 
-<div id="courseList2" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
+<div id="courseList2" data-role="page" class="bg-fnb jqm-demos jqm-home ui-page-theme-a">
     <div data-role="header" style="background:transparent;border:0px;">	
          <center>
             <IMG style=" width:125px;margin:10px 0px 0px 0px;" src="images/eduquest.png">     
@@ -116,9 +114,9 @@
     </div>     
     <div data-role="content" style="margin:2px;padding:2px;">   
         <center>
-            <div class="ui-icon-course2" style="width:259px;height:120px;border: 3px solid; border-radius: 10px; border-color:White;"></div>    
+            <div class="ui-icon-course2" style="width:259px;height:120px;border: 2px solid; border-radius: 10px; border-color:rgb(247,150,70);"></div>    
         </center>         
-         <ul  id="lv2" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">   
+         <ul data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">   
             <li data-role="list-divider">Food Safety & Hygiene Training</li>
             <li><a data-transition="none" href="#coursePage" onclick="setCourse('443')" data-ajax="false">WSQ Food Hygiene Course</a></li>
             <li><a data-transition="none" href="#coursePage" onclick="setCourse('521')" data-ajax="false">Joint ITE-NEA certificate in Food Hygiene for Food Handlers</a></li>
@@ -145,11 +143,10 @@
     </div>     
     <div data-role="content" style="margin:2px;padding:2px;">   
         <center>
-            <div class="ui-icon-course3" style="width:259px;height:120px;border: 3px solid; border-radius: 10px; border-color:White;"></div>    
+            <div class="ui-icon-course3" style="width:259px;height:120px;border: 2px solid; border-radius: 10px; border-color:rgb(79,98,40);"></div>    
         </center>         
-         <ul  id="lv3" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">   
-           
-        </ul>
+        <div id="lv3">
+        </div> 
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
        <div data-role="navbar" style="padding:5px;"> 
@@ -172,11 +169,10 @@
     </div>     
     <div data-role="content" style="margin:2px;padding:2px;">   
         <center>
-            <div class="ui-icon-course4" style="width:259px;height:120px;border: 3px solid; border-radius: 10px; border-color:White;"></div>    
+            <div class="ui-icon-course4" style="width:259px;height:120px;border: 2px solid; border-radius: 10px; border-color:rgb(128,0,0);"></div>    
         </center>         
-         <ul  id="lv4" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">   
-           
-        </ul>
+        <div id="lv4">
+        </div> 
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
        <div data-role="navbar" style="padding:5px;"> 
@@ -221,10 +217,9 @@
             <IMG style=" width:125px;margin:10px 0px 0px 0px;" src="images/eduquest.png">     
         </center>         
     </div>         
-    <div data-role="content" style="margin:2px;padding:2px;">          
-         <ul  id="ilv" data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;"> 
-            
-        </ul>
+    <div data-role="content" style="margin:2px;padding:2px;">
+        <div id="ilv">
+        </div>           
     </div>
     <div data-role="footer" data-position="fixed" style="background:#f7f7f7;">	        
        <div data-role="navbar" style="padding:5px;"> 

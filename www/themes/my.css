@@ -1,14 +1,29 @@
-.bg
+﻿.bg
 {
     -webkit-backface-visibility: hidden;
-    background: #f7f7f7; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f7f7f7 1%, #f9c667 71%, #f79621 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f7f7f7), color-stop(71%,#f9c667), color-stop(100%,#f79621)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f79621',GradientType=0 ); /* IE6-9 */    
+    background: url(../images/bg-others.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-fnb
+{
+    -webkit-backface-visibility: hidden;
+    background: url(../images/bg-fnb.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-splash
+{
+    -webkit-backface-visibility: hidden;
+    background: url(../images/Splash.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .ui-icon-courseList1:after{content:url(../images/icon1.png)} 
 .ui-icon-courseList2:after{content:url(../images/icon2.png)} 
