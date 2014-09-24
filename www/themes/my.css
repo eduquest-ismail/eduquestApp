@@ -1,6 +1,5 @@
 ﻿.bg
 {
-    -webkit-backface-visibility: hidden;
     background: url(../images/bg-others.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,7 +8,6 @@
 }
 .bg-fnb
 {
-    -webkit-backface-visibility: hidden;
     background: url(../images/bg-fnb.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -18,7 +16,6 @@
 }
 .bg-splash
 {
-    -webkit-backface-visibility: hidden;
     background: url(../images/Splash.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -40,28 +37,28 @@
 }
 .ui-icon-course1
 {
-    background-color: White;  
+    background-color: rgb(64,49,82);  
     background-repeat: no-repeat;
     background-position: right top;
     background-image: url("../images/course1.png");
 }
     .ui-icon-course2
 {
-    background-color: White; 
+    background-color: rgb(247,150,70); 
     background-repeat: no-repeat;
     background-position: left top;   
     background-image: url("../images/course2.png");
 }
     .ui-icon-course3
 {
-    background-color: White;  
+    background-color: rgb(79,98,40);  
     background-repeat: no-repeat;
     background-position: right top;   
     background-image: url("../images/course3.png");
 }
     .ui-icon-course4
 {
-    background-color: White;     
+    background-color: rgb(128,0,0);     
     background-repeat: no-repeat;
     background-position: left top;   
     background-image: url("../images/course4.png");
