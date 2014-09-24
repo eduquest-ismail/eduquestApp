@@ -10,21 +10,18 @@
     background: linear-gradient(to bottom,  #f7f7f7 1%,#f9c667 71%,#f79621 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f79621',GradientType=0 ); /* IE6-9 */    
 }
-.ui-icon-courseList1 
+.ui-icon-courseList1:after{content:url(../images/icon1.png)} 
+.ui-icon-courseList2:after{content:url(../images/icon2.png)} 
+.ui-icon-courseList3:after{content:url(../images/icon3.png)} 
+.ui-icon-courseList4:after{content:url(../images/icon4.png)} 
+.ui-navicon
 {
- 	background-image: url("../images/courseList1.png");
-}
-.ui-icon-courseList2 
-{
- 	background-image: url("../images/courseList2.png");
-}
-.ui-icon-courseList3
-{
- 	background-image: url("../images/courseList3.png");
-}
-.ui-icon-courseList4
-{
- 	background-image: url("../images/courseList4.png");
+    width:48px;
+    height:48px;
+    margin:0px;
+    padding:0px;
+    border-radius: 20px; 
+    border-color:White;
 }
 .ui-icon-course1
 {
@@ -54,12 +51,6 @@
     background-position: left top;   
     background-image: url("../images/course4.png");
 }
-.ui-navicon
-{
-    width:25px;
-    height:25px;
-    border-radius: 15px;
-}
 .icon {
       font-size: 32px;
-    }
+}
