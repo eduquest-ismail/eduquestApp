@@ -12,7 +12,9 @@
     Mohamed Ismail
   </author> 
   <preference name="fullscreen" value="false" />
-  <gap:splash src="images/Splash.png" />
+  <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
+  <gap:splash src="images/Splash.png" gap:platform="ios" width="640" height="960" />
+  <gap:splash src="images/Splash.png" gap:platform="ios" width="640" height="1136" />
   <content src="index.html" />
   <access origin="*" />
 </widget>
