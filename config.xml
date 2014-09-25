@@ -11,7 +11,8 @@
   <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
     Mohamed Ismail
   </author> 
-  <preference name="fullscreen" value="true" /> 
+  <preference name="fullscreen" value="false" />
+  <gap:splash src="images/Splash.png" />
   <content src="index.html" />
   <access origin="*" />
 </widget>
