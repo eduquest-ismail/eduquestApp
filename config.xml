@@ -11,12 +11,15 @@
   <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
     Mohamed Ismail
   </author>
-  <preference name="Fullscreen" value="false" />
+  <gap:platform name="ios" />
+  <gap:platform name="android" />
+  <gap:platform name="symbian" />
+  <gap:platform name="winphone" />
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
-  <gap:plugin name="SplashScreen" value="CDVSplashScreen" />
-  <plugin name="SplashScreen" value="CDVSplashScreen" />
-  <gap:splash src="images/Splash.png" gap:platform="ios" width="640" height="960" />
-  <gap:splash src="images/Splash.png" gap:platform="ios" width="640" height="1136" />
+  <preference name="AutoHideSplashScreen" value="false" />
+  <preference name="SplashScreenDelay" value="3000" />
+  <preference name="Fullscreen" value="false" />
+  <gap:splash src="Splash.png" />
   <content src="index.html" />
   <access origin="*" />
 </widget>
