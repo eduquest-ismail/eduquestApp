@@ -10,9 +10,11 @@
   </description>
   <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
     Mohamed Ismail
-  </author> 
-  <preference name="fullscreen" value="false" />
+  </author>
+  <preference name="Fullscreen" value="false" />
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
+  <gap:plugin name="SplashScreen" value="CDVSplashScreen" />
+  <plugin name="SplashScreen" value="CDVSplashScreen" />
   <gap:splash src="images/Splash.png" gap:platform="ios" width="640" height="960" />
   <gap:splash src="images/Splash.png" gap:platform="ios" width="640" height="1136" />
   <content src="index.html" />
