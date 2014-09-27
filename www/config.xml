@@ -64,6 +64,7 @@
   <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
   <gap:splash src="splash/ios/Default.png" width="320" height="480" />
   <gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
+  <gap:splash src="splash/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
   <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
   <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
   <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
