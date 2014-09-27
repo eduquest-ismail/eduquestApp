@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
      xmlns:gap   = "http://phonegap.com/ns/1.0"
-     id          = "com.phonegap.eduquest"
-     versionCode = "10"
-     version     = "1.0.0" >
+     id          = "com.eduquestMobile"
+     versionCode = "3"
+     version     = "3.5.1" >
   <name>Eduquest Mobile</name>
   <description>
-    Eduquest Mobile Application
+    Eduquest Mobile App
   </description>
   <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
     Mohamed Ismail
