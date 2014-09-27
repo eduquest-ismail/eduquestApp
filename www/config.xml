@@ -18,19 +18,11 @@
   <preference name="exit-on-suspend"            value="true" />
   <preference name="show-splash-screen-spinner" value="true" />
   <preference name="auto-hide-splash-screen"    value="false" />
- 
-  <!-- Icons -->
-
+  
   <icon src="icon.png" />
   <icon src="icons/ios/icon.png" width="57" height="57" />
   <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
   <icon src="icons/ios/icon_at_2x.png" width="114" height="114" />
-  <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
-  <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-  <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-
-
-  <!-- Splash Screens -->
   <gap:splash src="splash.png" />
   <gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
   <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
@@ -40,12 +32,16 @@
   <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
   <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
   <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-
+  
+  <!--
+  <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+  <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+  <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+  -->
+ 
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
-
   <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
-  </gap:config-file>
-  
+  </gap:config-file>  
   <access origin="*" />
 </widget>
