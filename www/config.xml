@@ -19,9 +19,6 @@
   <preference name="show-splash-screen-spinner" value="true" />
   <preference name="auto-hide-splash-screen"    value="false" />
   
-  <icon src="icon.png" />
-  <gap:splash src="splash.png" />
-
   <!-- iPhone and iPod touch  -->
   <icon src="assets/iphone/appicon-60.png" gap:platform="ios" width="60" height="60" />
   <icon src="assets/iphone/appicon-60@2x.png" gap:platform="ios" width="120" height="120" />
