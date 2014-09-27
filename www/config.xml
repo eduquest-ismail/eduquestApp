@@ -19,8 +19,8 @@
   <preference name="show-splash-screen-spinner" value="true" />
   <preference name="auto-hide-splash-screen"    value="false" />
 
-  <gap:splash src="assets/android/images/default.png" />
-  <icon src="assets/android/images/appicon.png" />
+  <gap:splash src="assets/android/default.png" />
+  <icon src="assets/android/appicon.png" />
         
   <!-- iPhone and iPod touch  -->
   <icon src="assets/iphone/appicon-60.png" gap:platform="ios" width="60" height="60" />
