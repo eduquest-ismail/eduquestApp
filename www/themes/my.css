@@ -14,14 +14,6 @@
     -o-background-size: cover;
     background-size: cover;
 }
-.bg-splash
-{
-    background: url(../images/Splash.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 .ui-icon-courseList1:after{content:url(../images/icon1.png)} 
 .ui-icon-courseList2:after{content:url(../images/icon2.png)} 
 .ui-icon-courseList3:after{content:url(../images/icon3.png)} 
