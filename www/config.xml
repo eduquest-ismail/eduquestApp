@@ -19,8 +19,8 @@
   <preference name="show-splash-screen-spinner" value="true" />
   <preference name="auto-hide-splash-screen"    value="false" />
 
-  <gap:splash src="assets/android/default.png" />
-  <icon src="assets/android/appicon.png" />
+  <gap:splash src="splash.png" />
+  <icon src="icon.png" />
         
   <!-- iPhone and iPod touch  -->
   <icon src="assets/iphone/appicon-60.png" gap:platform="ios" width="60" height="60" />
@@ -37,14 +37,7 @@
   <icon src="assets/iphone/appicon-72@2x.png" gap:platform="ios" width="144" height="144" />
   <icon src="assets/iphone/appicon-Small-50.png" gap:platform="ios" width="50" height="50" />
   <icon src="assets/iphone/appicon-Small-50@2x.png" gap:platform="ios" width="100" height="100" />
-
-  <!-- Android -->
-  <icon src="assets/android/appicon.png" gap:platform="android" gap:qualifier="ldpi" />
-  <icon src="assets/android/appicon.png" gap:platform="android" gap:qualifier="mdpi" />
-  <icon src="assets/android/appicon.png" gap:platform="android" gap:qualifier="hdpi" />
-  <icon src="assets/android/appicon.png" gap:platform="android" gap:qualifier="xhdpi" />
-  <icon src="assets/android/appicon.png" gap:platform="android" gap:qualifier="xxhdpi" />
-
+ 
   <!-- iPhone and iPod touch -->
   <gap:splash src="assets/iphone/Default.png" gap:platform="ios" width="320" height="480" />
   <gap:splash src="assets/iphone/Default@2x.png" gap:platform="ios" width="640" height="960" />
@@ -53,15 +46,6 @@
   <gap:splash src="assets/iphone/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
   <gap:splash src="assets/iphone/Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
   <gap:splash src="assets/iphone/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
-
-  <!-- Android -->
-  <gap:splash src="assets/android/images/res-long-port-ldpi/default.png" gap:platform="android" gap:qualifier="ldpi" />
-  <gap:splash src="assets/android/images/res-long-port-mdpi/default.png" gap:platform="android" gap:qualifier="mdpi" />
-  <gap:splash src="assets/android/images/res-long-port-hdpi/default.png" gap:platform="android" gap:qualifier="hdpi" />
-  <gap:splash src="assets/android/images/res-long-port-xhdpi/default.png" gap:platform="android" gap:qualifier="xhdpi" />
-  <gap:splash src="assets/android/images/res-long-port-xxhdpi/default.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
-  <gap:splash src="assets/android/images/res-long-land-xxhdpi/default.png" gap:platform="android" gap:qualifier="land-xxhdpi" />
-
 
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
   <gap:config-file platform="ios" parent="CFBundleShortVersionString">
