@@ -50,9 +50,7 @@
 
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
   <gap:config-file platform="android" parent="/manifest">
-    <activity android:name=".ActivityName"
-     android:label="@string/app_name"
-     android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+    <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >    
     </activity>
   </gap:config-file>
   <gap:config-file platform="ios" parent="CFBundleShortVersionString">
