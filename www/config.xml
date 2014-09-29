@@ -2,7 +2,7 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
      xmlns:gap   = "http://phonegap.com/ns/1.0"
      id          = "com.eduquestMobile"
-     versionCode = "3"
+     versionCode = "351"
      version     = "3.5.1" >
   <name>Eduquest Mobile</name>
   <description>
@@ -48,6 +48,12 @@
   <gap:splash src="assets/iphone/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
 
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
+  <gap:config-file platform="android" parent="/manifest">
+    <activity android:name=".ActivityName"
+     android:label="@string/app_name"
+     android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+    </activity>
+  </gap:config-file>
   <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
   </gap:config-file>  
