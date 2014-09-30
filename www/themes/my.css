@@ -49,3 +49,19 @@
 .icon {
       font-size: 32px;
 }
+.bigicon 
+{
+    color:#f89828;
+    font-size: 96px;
+}
+.alphaInnerBox {
+    margin: 5px;
+    padding: 10px;
+   -moz-border-radius:3px;
+    border-radius:3px;
+    background-color: #fff;
+
+    box-shadow:     0 0px 10px rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.27);
+}
