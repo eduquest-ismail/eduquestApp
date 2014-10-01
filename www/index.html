@@ -101,24 +101,21 @@
 </div>
 
 <div id="courseList2" data-role="page" class="bg-fnb jqm-demos jqm-home ui-page-theme-a">
-      <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-       <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+      <div data-role="header"  style="background:transparent;border:0px;margin:10px 0 0 0;">	
+        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
         <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
-         <center>
+        <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
     </div>   
     <div data-role="content" style="margin:2px;padding:2px;">   
         <center>
-            <div class="ui-icon-course2" style="width:259px;height:120px;border: 2px solid; border-radius: 10px; border-color:rgb(247,150,70);"></div>    
+            <div class="ui-icon-course1" style="width:259px;height:120px;border: 2px solid; border-radius: 10px; border-color:rgb(79,98,40);"></div>    
         </center>         
-         <ul data-role="listview" data-inset="true" style="margin:24px 5px 5px 5px;">   
-            <li data-role="list-divider">Food Safety & Hygiene Training</li>
-            <li><a data-transition="none" href="#coursePage" onclick="setCourse('443')" data-ajax="false">WSQ Food Hygiene Course</a></li>
-            <li><a data-transition="none" href="#coursePage" onclick="setCourse('521')" data-ajax="false">Joint ITE-NEA certificate in Food Hygiene for Food Handlers</a></li>
-        </ul>
+        <div id="lv2">
+        </div> 
     </div>
-    <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
+       <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
             <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
@@ -126,9 +123,9 @@
             <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
             <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
             <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
-      </ul>
+       </ul>
     </div><!-- /navbar -->
-    </div><!-- /footer -->     
+    </div><!-- /footer -->    
 </div>
 
 <div id="courseList3" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
