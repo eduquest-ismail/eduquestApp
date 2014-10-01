@@ -21,21 +21,19 @@
     <center>
           <IMG style="width:190px;margin:30px 0px 0px 0px;" src="images/eduquest.png">     
     </center>        
-    <div data-role="content" style="margin:2px;padding:2px;">     
-         <a data-transition="none"  href="#courseList1" style="text-decoration: none;">                   
-             <div class="ui-grid-b  ui-icon-course1  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(64,49,82);">
-                <div class="ui-block-a">
-                     <div class="ui-body ui-body-a ui-corner-all" style="padding:2px;margin:0px;height:102px;background:rgb(64,49,82);border:0px;"> 
-                        <center>
-                        <p style="color:White;">Hospitality Training</p>
-                        </center>
-                        </div>
-                </div>      
-             </div>
-         </a>
+    <div data-role="content" style="margin:2px;padding:2px;">  
+       
+         <div onclick="$(this).fadeOut('fast', function() { location.assign('#courseList1');  $(this).fadeIn('fast'); });"  class="ui-grid-b  ui-icon-course1  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(64,49,82);">
+            <div class="ui-block-a">
+                    <div class="ui-body ui-body-a ui-corner-all" style="padding:2px;margin:0px;height:102px;background:rgb(64,49,82);border:0px;"> 
+                    <center>
+                    <p style="color:White;">Hospitality Training</p>
+                    </center>
+                    </div>
+            </div>      
+        </div>
 
-        <a data-transition="none" href="#courseList2" style="text-decoration: none;">              
-        <div class="ui-grid-b  ui-icon-course2  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(247,150,70);">
+        <div onclick="$(this).fadeOut('fast', function() { location.assign('#courseList2');  $(this).fadeIn('fast'); });"  class="ui-grid-b  ui-icon-course2  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(247,150,70);">
         <div class="ui-block-a"></div>
         <div class="ui-block-b"></div>
             <div class="ui-block-c">
@@ -46,10 +44,8 @@
                     </div>        
             </div>      
          </div>
-         </a>
 
-        <a data-transition="none"  href="#courseList3" style="text-decoration: none;">
-        <div class="ui-grid-b  ui-icon-course3  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(79,98,40);">
+         <div onclick="$(this).fadeOut('fast', function() { location.assign('#courseList3');  $(this).fadeIn('fast'); });"  class="ui-grid-b  ui-icon-course3  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(79,98,40);">
             <div class="ui-block-a">
                    <div class="ui-body ui-body-a ui-corner-all" style="padding:2px;margin:0px;height:102px;background:rgb(79,98,40);border:0px;"> 
                     <center>
@@ -58,10 +54,8 @@
                     </div>   
             </div>      
          </div>
-         </a>
 
-        <a data-transition="none"  href="#courseList4" style="text-decoration: none;">           
-        <div class="ui-grid-b  ui-icon-course4  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(128,0,0);">
+        <div onclick="$(this).fadeOut('fast', function() { location.assign('#courseList4');  $(this).fadeIn('fast'); });"  class="ui-grid-b  ui-icon-course4  ui-corner-all" style="height:105px;margin:2px;border: 2px solid; border-radius: 13px; border-color:rgb(128,0,0);">
             <div class="ui-block-a"></div>
             <div class="ui-block-b"></div>       
             <div class="ui-block-c">
@@ -72,7 +66,6 @@
                     </div>
            </div>      
          </div>
-         </a>
 
     </div>
     
@@ -81,8 +74,8 @@
 
 <div id="courseList1" data-role="page" class="bg-fnb jqm-demos jqm-home ui-page-theme-a">
       <div data-role="header"  style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
+        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
         <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
@@ -97,21 +90,21 @@
        <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
-        </ul>
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+       </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->    
 </div>
 
 <div id="courseList2" data-role="page" class="bg-fnb jqm-demos jqm-home ui-page-theme-a">
       <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
-        <center>
+       <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
+         <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
     </div>   
@@ -128,20 +121,20 @@
     <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
-        </ul>
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+      </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->     
 </div>
 
 <div id="courseList3" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
       <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
+        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
         <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
@@ -156,20 +149,20 @@
       <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
-        </ul>
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+       </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->      
 </div>
 
 <div id="courseList4" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
       <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
+        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
         <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
@@ -184,21 +177,21 @@
       <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
-        </ul>
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+      </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->    
 </div>
 
 <div id="coursePage" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
      <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
-        <center>
+         <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
+       <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
     </div>       
@@ -210,11 +203,11 @@
   <div data-role="footer" data-position="fixed" style="background:#ffffff;">	        
        <div data-role="navbar" style="padding:5px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
         </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->      
@@ -222,9 +215,9 @@
 
 <div id="intakePage" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
     <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
-        <center>
+          <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
+      <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
     </div>        
@@ -235,21 +228,21 @@
      <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
-        </ul>
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+       </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->    
 </div>
 
 <div id="gregisterPage" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
      <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
-        <center>
+         <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
+       <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
     </div>   
@@ -271,11 +264,11 @@
      <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
         </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->     
@@ -283,8 +276,8 @@
 
 <div id="menuPage" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a">
      <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.replace('#menuPage')"  class="icon ion-grid"></i>
+        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.replace('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
         <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
@@ -293,8 +286,8 @@
         <center>
             <div style="max-width:250px;">
                 <center>
-                    <i style="float:left;margin:20px;color:#f89828;width:60px;height:78px;padding:0px 10px 0 10px;" onclick="this.style.opacity=0.2;location.replace('#loginPage');this.style.opacity=1;"  class="bigicon ion-log-in alphaInnerBox"></i>
-                    <i style="float:left;margin:20px;color:#f89828;width:60px;height:78px;padding:0px 10px 0 10px;" onclick="this.style.opacity=0.2;navigator.app.exitApp();"  class="bigicon ion-power alphaInnerBox"></i>
+                    <i style="float:left;margin:20px;color:#f89828;width:60px;height:78px;padding:0px 10px 0 10px;" onclick="$(this).fadeOut('fast', function() {   location.replace('#loginPage'); $(this).fadeIn('fast'); });"  class="bigicon ion-log-in alphaInnerBox"></i>
+                    <i style="float:left;margin:20px;color:#f89828;width:60px;height:78px;padding:0px 10px 0 10px;" onclick="$(this).fadeOut('fast', function() {   navigator.app.exitApp(); });"  class="bigicon ion-power alphaInnerBox"></i>
                 </center>  
             </div>
         </center>  
@@ -302,11 +295,11 @@
      <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
         </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->     
@@ -315,9 +308,9 @@
 
 <div id="loginPage" data-role="page" class="bg jqm-demos jqm-home ui-page-theme-a"> 
     <div data-role="header" style="background:transparent;border:0px;margin:10px 0 0 0;">	
-        <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="history.back()"  class="icon ion-arrow-left-b"></i>
-        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="location.assign('#menuPage')"  class="icon ion-grid"></i>
-        <center>
+       <i style="float:left;margin:0 0 0 10px;color:#f89828;" onclick="$(this).fadeOut('fast', function() { history.back(); $(this).fadeIn('fast'); });" class="icon ion-arrow-left-b"></i>
+        <i style="float:right;margin:0 10px 0 0;color:#f89828;" onclick="$(this).fadeOut('fast', function() { location.assign('#menuPage'); $(this).fadeIn('fast'); });" class="icon ion-grid"></i>
+         <center>
             <IMG style=" width:125px;margin:0px;" src="images/eduquest.png">     
         </center>        
     </div>            
@@ -350,11 +343,11 @@
     <div data-role="footer" data-position="fixed" style="background:#ffffff;height:50px;">	        
        <div data-role="navbar" style="padding:2px;margin:0px;"> 
         <ul> 
-            <li style="padding:3px 0 0 0;"><center><i onclick="this.style.opacity=0.2;location.assign('#homePage');this.style.opacity=1;" style="color:Gray;" class="icon ion-home"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList1');this.style.opacity=1;" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList2');this.style.opacity=1;"  class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList3');this.style.opacity=1;"  class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
-            <li><center><i onclick="this.style.opacity=0.2;location.assign('#courseList4');this.style.opacity=1;"  class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
+            <li style="padding:3px 0 0 0;"><center><i  onclick="$(this).fadeOut('fast', function() {   location.assign('#homePage'); $(this).fadeIn('fast'); });"  style="color:Gray;" class="icon ion-home"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList1'); $(this).fadeIn('fast'); });" class="ui-icon-courseList1" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList2'); $(this).fadeIn('fast'); });" class="ui-icon-courseList2" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList3'); $(this).fadeIn('fast'); });" class="ui-icon-courseList3" style="vertical-align:middle;"></i></center></li>
+            <li><center><i onclick="$(this).fadeOut('fast', function() {   location.assign('#courseList4'); $(this).fadeIn('fast'); });" class="ui-icon-courseList4" style="vertical-align:middle;"></i></center></li>         
         </ul>
     </div><!-- /navbar -->
     </div><!-- /footer -->     
