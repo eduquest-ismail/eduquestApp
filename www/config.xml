@@ -3,8 +3,8 @@
      xmlns:gap   = "http://phonegap.com/ns/1.0"
      xmlns:android   = "http://schemas.android.com/apk/res/android"
      id          = "com.eduquestMobile"
-     versionCode = "352"
-     version     = "3.5.2" >
+     versionCode = "353"
+     version     = "3.5.3" >
   <name>Eduquest Mobile</name>
   <description>
     Eduquest Mobile App
@@ -12,17 +12,13 @@
   <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
     Mohamed Ismail - ISZA Technologies
   </author>
-
   <preference name="permissions"                value="none"/>
-  <preference name="phonegap-version"           value="3.5.0" />
   <preference name="fullscreen"                 value="true" />
   <preference name="exit-on-suspend"            value="false" />
   <preference name="show-splash-screen-spinner" value="true" />
   <preference name="auto-hide-splash-screen"    value="false" />
-
   <gap:splash src="splash.png" />
-  <icon src="icon.png" />
-        
+  <icon src="icon.png" />        
   <!-- iPhone and iPod touch  -->
   <icon src="assets/iphone/appicon-60.png" gap:platform="ios" width="60" height="60" />
   <icon src="assets/iphone/appicon-60@2x.png" gap:platform="ios" width="120" height="120" />
@@ -37,8 +33,7 @@
   <icon src="assets/iphone/appicon-72.png" gap:platform="ios" width="72" height="72" />
   <icon src="assets/iphone/appicon-72@2x.png" gap:platform="ios" width="144" height="144" />
   <icon src="assets/iphone/appicon-Small-50.png" gap:platform="ios" width="50" height="50" />
-  <icon src="assets/iphone/appicon-Small-50@2x.png" gap:platform="ios" width="100" height="100" />
- 
+  <icon src="assets/iphone/appicon-Small-50@2x.png" gap:platform="ios" width="100" height="100" /> 
   <!-- iPhone and iPod touch -->
   <gap:splash src="assets/iphone/Default.png" gap:platform="ios" width="320" height="480" />
   <gap:splash src="assets/iphone/Default@2x.png" gap:platform="ios" width="640" height="960" />
@@ -47,7 +42,6 @@
   <gap:splash src="assets/iphone/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
   <gap:splash src="assets/iphone/Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
   <gap:splash src="assets/iphone/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
-
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
   <gap:config-file platform="android" parent="/manifest">
     <application android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />  
