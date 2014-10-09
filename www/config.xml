@@ -3,15 +3,21 @@
      xmlns:gap   = "http://phonegap.com/ns/1.0"
      xmlns:android   = "http://schemas.android.com/apk/res/android"
      id          = "com.eduquestMobile"
-     versionCode = "353"
-     version     = "3.5.3" >
+     versionCode = "354"
+     version     = "3.5.4" >
+  <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+    <string>354</string>
+  </gap:config-file>
   <name>Eduquest Mobile</name>
   <description>
-    Eduquest Mobile App
+    Eduquest Mobile
   </description>
   <author email="ismail@eduqestindia.in" href="www.eduquestindia.in">
     Mohamed Ismail - ISZA Technologies
-  </author>
+  </author>  
+  <gap:config-file platform="android" parent="/manifest">
+    <application android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+  </gap:config-file> 
   <preference name="permissions"                value="none"/>
   <preference name="fullscreen"                 value="true" />
   <preference name="exit-on-suspend"            value="false" />
@@ -43,11 +49,5 @@
   <gap:splash src="assets/iphone/Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
   <gap:splash src="assets/iphone/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
   <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
-  <gap:config-file platform="android" parent="/manifest">
-    <application android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />  
-  </gap:config-file>
-  <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
-  </gap:config-file>  
   <access origin="*" />
 </widget>
